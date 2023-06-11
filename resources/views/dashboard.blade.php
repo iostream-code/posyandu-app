@@ -36,11 +36,12 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top d-flex align-items-center header-transparent">
         <div class="container d-flex align-items-center justify-content-between">
-
-            <div class="logo">
-                {{-- <h1><a href="index.html"><span>Bootslander</span></a></h1> --}}
-                <!-- Uncomment below if you prefer to use an image logo -->
-                <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+            <div class="navbar-brand">
+                <div class="d-flex justify-content-center align-items-center text-light">
+                    <img src="assets/img/logo.png" alt="Logo" height="40"
+                        class="d-inline-block align-text-top me-3">
+                    <strong>Posyandu Dahlia 1</strong>
+                </div>
             </div>
 
             <nav id="navbar" class="navbar">
@@ -125,19 +126,56 @@
         <section id="about" class="about">
             <div class="container-fluid">
                 <div class="row">
-                    {{-- <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch"
-                        data-aos="fade-right">
-                        <a href="https://www.youtube.com/watch?v=StpBR2W8G5A" class="glightbox play-btn mb-4"></a>
-                    </div> --}}
 
                     <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5"
                         data-aos="fade-left">
-                        <h3>Tentang Posyandu Dahlia 1</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus mollitia officiis nisi
-                            aliquam ullam pariatur nam placeat molestias enim doloribus numquam delectus, nulla, neque
-                            ipsa eveniet tempora est distinctio error eligendi! Dolor recusandae dicta aliquid sit quod,
-                            nulla voluptas qui aspernatur eligendi vero numquam, reiciendis dolores dolore aperiam
-                            doloremque quis.</p>
+                        <div class="section-title" data-aos="fade-up">
+                            <h2>Tentang Kami</h2>
+                            <p>Posyandu Dahlia 1</p>
+                        </div>
+
+                        <p class="text-tentang">
+                            Posyandu Dahlia 1 merupakan pos pelayanan yang terletak di Dusun Jetis,
+                            Desa Ngariboyo. Dimana kegiatan ini bertujuan untuk memudahkan masyarakat dalam
+                            memperoleh pelayanan kesehatan ibu dan anak. Pelaksanaan posyandu dilakukan secara rutin
+                            satu bulan sekali di tempat yang telah disediakan oleh petugas. Agar berjalan dengan
+                            lancar, posyandu ini didampingi oleh kader posyandu dan bidan atau petugas puskesmas,
+                            sehingga perkembangan dan pertumbuhan ibu dan anak dapat dipantau secara maksimal.
+                            <br>
+                            <br>
+                            <strong>VISI :</strong>
+                            <br>
+                            Menjadikan masyarakat yang sehat, cerdas dan mandiri
+                            <br>
+                            <br>
+                            <strong>MISI :</strong>
+                            <br>
+                            1. Kesehatan yang optimal mewujudkan keluarga sehat dan harmoni
+                            <br>
+                            2. Meningkatkan masyarakat agar hidup sehat dan bersih
+                        </p>
+
+                    </div>
+                    <div class="col-xl-4 icon-boxes d-flex flex-column align-items-center justify-content-center"
+                        data-aos="fade-left">
+                        <img class="rounded" src="assets\img\hero-main.png" alt="potret pemeriksaan balita">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
+
+        <!-- ======= Features Section ======= -->
+        <section id="features" class="features section-bg">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-xl-10 col-lg-8 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5"
+                        data-aos="fade-left">
+                        <div class="section-title" data-aos="fade-up">
+                            <h2>Pelayanan</h2>
+                            <p>Kami Melayani</p>
+                        </div>
 
                         <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
                             <div class="icon"><i class="bx bx-fingerprint"></i></div>
@@ -163,25 +201,9 @@
                                 praesentium molestias?</p>
                         </div>
                     </div>
-                    <div class="col-xl-4 icon-boxes d-flex flex-column align-items-center justify-content-center"
-                        data-aos="fade-left">
-                        <img class="rounded" src="assets\img\hero-main.png" alt="potret pemeriksaan balita">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End About Section -->
-
-        <!-- ======= Features Section ======= -->
-        <section id="features" class="features">
-            <div class="container">
-
-                <div class="section-title" data-aos="fade-up">
-                    <h2>Pelayanan</h2>
-                    <p>Kami Melayani</p>
                 </div>
 
-                <div class="row" data-aos="fade-left">
+                {{-- <div class="row" data-aos="fade-left">
                     <div class="col-lg-3 col-md-4">
                         <div class="icon-box" data-aos="zoom-in" data-aos-delay="50">
                             <i class="ri-store-line" style="color: #ffbb2c;"></i>
@@ -254,59 +276,11 @@
                             <h3><a href="">Flavor Nivelanda</a></h3>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
             </div>
         </section>
         <!-- End Features Section -->
-
-        <!-- ======= Counts Section ======= -->
-        <section id="counts" class="counts">
-            <div class="container">
-
-                <div class="row" data-aos="fade-up">
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="count-box">
-                            <i class="bi bi-emoji-smile"></i>
-                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p>Happy Clients</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-                        <div class="count-box">
-                            <i class="bi bi-journal-richtext"></i>
-                            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p>Projects</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-                        <div class="count-box">
-                            <i class="bi bi-headset"></i>
-                            <span data-purecounter-start="0" data-purecounter-end="1463"
-                                data-purecounter-duration="1" class="purecounter"></span>
-                            <p>Hours Of Support</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-                        <div class="count-box">
-                            <i class="bi bi-people"></i>
-                            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p>Hard Workers</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-        <!-- End Counts Section -->
 
         <!-- ======= Details Section ======= -->
         <section id="details" class="details">
@@ -426,7 +400,7 @@
         <!-- End Details Section -->
 
         <!-- ======= Gallery Section ======= -->
-        <section id="gallery" class="gallery">
+        <section id="gallery" class="gallery section-bg">
             <div class="container">
 
                 <div class="section-title" data-aos="fade-up">
@@ -506,368 +480,6 @@
         </section>
         <!-- End Gallery Section -->
 
-        <!-- ======= Testimonials Section ======= -->
-        <section id="testimonials" class="testimonials">
-            <div class="container">
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonial-1.jpg" class="testimonial-img"
-                                    alt="">
-                                <h3>Angeline Ricardo</h3>
-                                <h4>Ibu Rumah Tangga</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Dengan adanya website ini sangat membantu Saya dalam memantau kondisi dari cek
-                                    kesehatan anak Mingguan di Posyandu Dahlia 1. Cara aksesnya sangat mudah dan sangat
-                                    mudah untuk mengenali fitur didalamnya.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div>
-                        <!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonial-2.jpg" class="testimonial-img"
-                                    alt="">
-                                <h3>Yoana Cristie</h3>
-                                <h4>Ibu Rumah Tangga</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Dengan adanya website ini sangat membantu Saya dalam memantau kondisi dari cek
-                                    kesehatan anak Mingguan di Posyandu Dahlia 1. Cara aksesnya sangat mudah dan sangat
-                                    mudah untuk mengenali fitur didalamnya.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div>
-                        <!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonial-3.jpg" class="testimonial-img"
-                                    alt="">
-                                <h3>Ramdani Yurike</h3>
-                                <h4>Pemilik Butik</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Dengan adanya website ini sangat membantu Saya dalam memantau kondisi dari cek
-                                    kesehatan anak Mingguan di Posyandu Dahlia 1. Cara aksesnya sangat mudah dan sangat
-                                    mudah untuk mengenali fitur didalamnya.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div>
-                        <!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonial-4.jpg" class="testimonial-img"
-                                    alt="">
-                                <h3>Elsa Yuniar</h3>
-                                <h4>Admin Bank</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Dengan adanya website ini sangat membantu Saya dalam memantau kondisi dari cek
-                                    kesehatan anak Mingguan di Posyandu Dahlia 1. Cara aksesnya sangat mudah dan sangat
-                                    mudah untuk mengenali fitur didalamnya.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div>
-                        <!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonial-5.jpg" class="testimonial-img"
-                                    alt="">
-                                <h3>Li Chen</h3>
-                                <h4>Ibu Rumah Tangga</h4>
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Dengan adanya website ini sangat membantu Saya dalam memantau kondisi dari cek
-                                    kesehatan anak Mingguan di Posyandu Dahlia 1. Cara aksesnya sangat mudah dan sangat
-                                    mudah untuk mengenali fitur didalamnya.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div>
-                        <!-- End testimonial item -->
-
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-
-            </div>
-        </section>
-        <!-- End Testimonials Section -->
-
-        {{-- <!-- ======= Team Section ======= -->
-        <section id="team" class="team">
-            <div class="container">
-
-                <div class="section-title" data-aos="fade-up">
-                    <h2>Team</h2>
-                    <p>Our Great Team</p>
-                </div>
-
-                <div class="row" data-aos="fade-left">
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="member" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid"
-                                    alt=""></div>
-                            <div class="member-info">
-                                <h4>Walter White</h4>
-                                <span>Chief Executive Officer</span>
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-                        <div class="member" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid"
-                                    alt=""></div>
-                            <div class="member-info">
-                                <h4>Sarah Jhonson</h4>
-                                <span>Product Manager</span>
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-                        <div class="member" data-aos="zoom-in" data-aos-delay="300">
-                            <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid"
-                                    alt=""></div>
-                            <div class="member-info">
-                                <h4>William Anderson</h4>
-                                <span>CTO</span>
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-                        <div class="member" data-aos="zoom-in" data-aos-delay="400">
-                            <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid"
-                                    alt=""></div>
-                            <div class="member-info">
-                                <h4>Amanda Jepson</h4>
-                                <span>Accountant</span>
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-        <!-- End Team Section --> --}}
-
-        {{-- <!-- ======= Pricing Section ======= -->
-        <section id="pricing" class="pricing">
-            <div class="container">
-
-                <div class="section-title" data-aos="fade-up">
-                    <h2>Pricing</h2>
-                    <p>Check our Pricing</p>
-                </div>
-
-                <div class="row" data-aos="fade-left">
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="box" data-aos="zoom-in" data-aos-delay="100">
-                            <h3>Free</h3>
-                            <h4><sup>$</sup>0<span> / month</span></h4>
-                            <ul>
-                                <li>Aida dere</li>
-                                <li>Nec feugiat nisl</li>
-                                <li>Nulla at volutpat dola</li>
-                                <li class="na">Pharetra massa</li>
-                                <li class="na">Massa ultricies mi</li>
-                            </ul>
-                            <div class="btn-wrap">
-                                <a href="#" class="btn-buy">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
-                        <div class="box featured" data-aos="zoom-in" data-aos-delay="200">
-                            <h3>Business</h3>
-                            <h4><sup>$</sup>19<span> / month</span></h4>
-                            <ul>
-                                <li>Aida dere</li>
-                                <li>Nec feugiat nisl</li>
-                                <li>Nulla at volutpat dola</li>
-                                <li>Pharetra massa</li>
-                                <li class="na">Massa ultricies mi</li>
-                            </ul>
-                            <div class="btn-wrap">
-                                <a href="#" class="btn-buy">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-                        <div class="box" data-aos="zoom-in" data-aos-delay="300">
-                            <h3>Developer</h3>
-                            <h4><sup>$</sup>29<span> / month</span></h4>
-                            <ul>
-                                <li>Aida dere</li>
-                                <li>Nec feugiat nisl</li>
-                                <li>Nulla at volutpat dola</li>
-                                <li>Pharetra massa</li>
-                                <li>Massa ultricies mi</li>
-                            </ul>
-                            <div class="btn-wrap">
-                                <a href="#" class="btn-buy">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-                        <div class="box" data-aos="zoom-in" data-aos-delay="400">
-                            <span class="advanced">Advanced</span>
-                            <h3>Ultimate</h3>
-                            <h4><sup>$</sup>49<span> / month</span></h4>
-                            <ul>
-                                <li>Aida dere</li>
-                                <li>Nec feugiat nisl</li>
-                                <li>Nulla at volutpat dola</li>
-                                <li>Pharetra massa</li>
-                                <li>Massa ultricies mi</li>
-                            </ul>
-                            <div class="btn-wrap">
-                                <a href="#" class="btn-buy">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-        <!-- End Pricing Section --> --}}
-
-        <!-- ======= F.A.Q Section ======= -->
-        <section id="faq" class="faq section-bg">
-            <div class="container">
-
-                <div class="section-title" data-aos="fade-up">
-                    <h2>F.A.Q</h2>
-                    <p>Paling sering Ditanyakan</p>
-                </div>
-
-                <div class="faq-list">
-                    <ul>
-                        <li data-aos="fade-up">
-                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
-                                data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i
-                                    class="bx bx-chevron-down icon-show"></i><i
-                                    class="bx bx-chevron-up icon-close"></i></a>
-                            <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
-                                <p>
-                                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet
-                                    non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor
-                                    purus non.
-                                </p>
-                            </div>
-                        </li>
-
-                        <li data-aos="fade-up" data-aos-delay="100">
-                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                                data-bs-target="#faq-list-2" class="collapsed">Feugiat scelerisque varius morbi enim
-                                nunc? <i class="bx bx-chevron-down icon-show"></i><i
-                                    class="bx bx-chevron-up icon-close"></i></a>
-                            <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
-                                <p>
-                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
-                                    velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend
-                                    donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
-                                    cursus turpis massa tincidunt dui.
-                                </p>
-                            </div>
-                        </li>
-
-                        <li data-aos="fade-up" data-aos-delay="200">
-                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                                data-bs-target="#faq-list-3" class="collapsed">Dolor sit amet consectetur adipiscing
-                                elit? <i class="bx bx-chevron-down icon-show"></i><i
-                                    class="bx bx-chevron-up icon-close"></i></a>
-                            <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
-                                <p>
-                                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus
-                                    pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit.
-                                    Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis
-                                    tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                                </p>
-                            </div>
-                        </li>
-
-                        <li data-aos="fade-up" data-aos-delay="300">
-                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                                data-bs-target="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam
-                                aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i
-                                    class="bx bx-chevron-up icon-close"></i></a>
-                            <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
-                                <p>
-                                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in
-                                    est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl
-                                    suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
-                                </p>
-                            </div>
-                        </li>
-
-                        <li data-aos="fade-up" data-aos-delay="400">
-                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                                data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare.
-                                Varius vel pharetra vel turpis nunc eget lorem dolor? <i
-                                    class="bx bx-chevron-down icon-show"></i><i
-                                    class="bx bx-chevron-up icon-close"></i></a>
-                            <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
-                                <p>
-                                    Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo
-                                    integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc
-                                    eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
-                                </p>
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
-
-            </div>
-        </section>
-        <!-- End F.A.Q Section -->
-
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="contact">
             <div class="container">
@@ -946,9 +558,9 @@
     <footer id="footer">
         <div class="footer-top">
             <div class="container">
-                <div class="row">
+                <div class="row gap-5">
 
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-6 col-md-8">
                         <div class="footer-info">
                             <h3>Bootslander</h3>
                             <p class="pb-3"><em>Qui repudiandae et eum dolores alias sed ea. Qui suscipit veniam
@@ -961,7 +573,7 @@
                             </p>
                         </div>
                     </div>
-
+                    
                     <div class="col-lg-2 col-md-6 footer-links">
                         <h4>Useful Links</h4>
                         <ul>
@@ -983,15 +595,6 @@
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
                         </ul>
                     </div>
-
-                    {{-- <div class="col-lg-4 col-md-6 footer-newsletter">
-                        <h4>Our Newsletter</h4>
-                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-                        <form action="" method="post">
-                            <input type="email" name="email"><input type="submit" value="Subscribe">
-                        </form>
-
-                    </div> --}}
 
                 </div>
             </div>
