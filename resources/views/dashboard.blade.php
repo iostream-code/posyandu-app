@@ -28,7 +28,7 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/dashboard/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -50,28 +50,27 @@
                     <li><a class="nav-link scrollto" href="#about">Tentang</a></li>
                     <li><a class="nav-link scrollto" href="#features">Layanan</a></li>
                     <li><a class="nav-link scrollto" href="#gallery">Galeri</a></li>
-                    {{-- <li><a class="nav-link scrollto" href="#team">Team</a></li>
-                    <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> --}}
-                    {{-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Drop Down 1</a></li>
-                            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
-                                        class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="#">Deep Drop Down 1</a></li>
-                                    <li><a href="#">Deep Drop Down 2</a></li>
-                                    <li><a href="#">Deep Drop Down 3</a></li>
-                                    <li><a href="#">Deep Drop Down 4</a></li>
-                                    <li><a href="#">Deep Drop Down 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Drop Down 2</a></li>
-                            <li><a href="#">Drop Down 3</a></li>
-                            <li><a href="#">Drop Down 4</a></li>
-                        </ul>
-                    </li> --}}
                     <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
-                    <li><button class="nav-link btn-login" href="#login">Masuk</button></li>
+                    <li class="dropdown">
+                        {{-- <a href="#"><span>Login/Register</span><i class="bi bi-chevron-down"></i></a> --}}
+                        <button class="nav-link btn-login"><span>Masuk</span> <i class="bi bi-chevron-down"></i></button>
+                        <ul class="mt-2">
+                            @if (Route::has('login'))
+                                @auth
+                                    <a href="{{ url('/home') }}"
+                                        class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
+                                @else
+                                    <a href="{{ route('login') }}"
+                                        class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Login</a>
+                                    @if (Route::has('register'))
+                                        <a href="{{ route('register') }}"
+                                            class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
+                                    @endif
+                                @endauth
+                            @endif
+                        </ul>
+                    </li>
+                    {{-- <li><button class="nav-link btn-login" href="#login">Masuk</button></li> --}}
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
@@ -573,7 +572,7 @@
                             </p>
                         </div>
                     </div>
-                    
+
                     <div class="col-lg-2 col-md-6 footer-links">
                         <h4>Useful Links</h4>
                         <ul>
