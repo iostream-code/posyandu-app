@@ -173,32 +173,31 @@
                     <div class="col-xl-10 col-lg-8 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5"
                         data-aos="fade-left">
                         <div class="section-title" data-aos="fade-up">
-                            <h2>Pelayanan</h2>
+                            <h2>Layanan</h2>
                             <p>Kami Melayani</p>
+                        </div>
+
+                        <div class="jadwal">
+                            Jadwal kegiatan Posyandu Dahlia 1 dilakukan secara rutin tanggal 21 setiap bulannya, yang berlokasi di rumah Ibu Laili Mukharomah RT 3 RW 1 Dusun Jetis, Desa Ngariboyo.
+                            Adapun program layanan yang dilakukan oleh Posyandu Dahlia 1 diantaranya :
                         </div>
 
                         <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
                             <div class="icon"><i class="bx bx-fingerprint"></i></div>
-                            <h4 class="title"><a href="">Imunisasi Anak</a></h4>
-                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-                                praesentium debitis esse repellat commodi expedita quaerat mollitia recusandae eius
-                                quae!</p>
+                            <h4 class="title"><a href="">Timbangan</a></h4>
+                            <p class="description">Posyandu Dahlia 1 melayani program timbangan, dimana bayi dan balita akan di timbang berat badan dan diukur tinggi badannya untuk mengetahui perkembangan bayi dan balita yang ada di Dusun Jetis Desa Ngariboyo setiap bulannya </p>
                         </div>
 
                         <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
                             <div class="icon"><i class="bx bx-gift"></i></div>
-                            <h4 class="title"><a href="">Cek Kesehatan</a></h4>
-                            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
-                                ratione voluptatibus perspiciatis illum aliquam excepturi corporis quae hic sequi
-                                impedit?</p>
+                            <h4 class="title"><a href="">Imunisasi</a></h4>
+                            <p class="description">Posyandu Dahlia 1 juga melayani program imunisasi yang bagi bayi dan balita, dimana imunisasi dilakukan secara bertahap sesuai dengan umur dan jenis vaksinasi agar kesehatan terjaga dan terhindar dari penyakit</p>
                         </div>
 
                         <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
                             <div class="icon"><i class="bx bx-atom"></i></div>
                             <h4 class="title"><a href="">Cek Ibu Hamil</a></h4>
-                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-                                necessitatibus qui suscipit amet saepe veritatis tenetur, laudantium assumenda
-                                praesentium molestias?</p>
+                            <p class="description">Posyandu Dahlia 1 melayani cek kesehatan ibu hamil untuk mengetahui perkembangan janin dan kesehatan ibu untuk menghindari resiko yang tidak diinginkan saat kelahiran</p>
                         </div>
                     </div>
                 </div>
