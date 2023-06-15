@@ -23,7 +23,9 @@
                                 @csrf
                                 <div class="col-12">
                                     <label for="name" class="form-label">Nama Lengkap</label>
-                                    <input type="text" name="name" class="form-control" id="name" required>
+                                    <input type="text" class="form-control" id="name"
+                                        @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}"
+                                        required autocomplete="name" autofocus>
                                     @error('name')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -33,7 +35,9 @@
                                 </div>
                                 <div class="col-12">
                                     <label for="email" class="form-label">Email</label>
-                                    <input type="email" name="email" class="form-control" id="email" required>
+                                    <input type="email" class="form-control" id="email"
+                                        @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}"
+                                        required autocomplete="email">
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -43,7 +47,9 @@
                                 </div>
                                 <div class="col-12">
                                     <label for="password" class="form-label">Password</label>
-                                    <input type="password" name="password" class="form-control" id="password" required>
+                                    <input type="password" class="form-control" id="password"
+                                        @error('password') is-invalid @enderror" name="password" required
+                                        autocomplete="new-password">
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -53,7 +59,7 @@
                                 </div>
                                 <div class="col-12">
                                     <label for="password-confirm" class="form-label">Masukkan Ulang Password</label>
-                                    <input type="password-confirm" name="password" class="form-control"
+                                    <input type="password" name="password_confirmation" class="form-control"
                                         id="password-confirm" required autocomplete="new-password">
                                 </div>
                                 <div class="col-12">

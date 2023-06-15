@@ -16,8 +16,12 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('dashboard');
-});
+})->name('dashboard');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/my-portal', function(){
+    return view('customers.home');
+})->name('my-portal');

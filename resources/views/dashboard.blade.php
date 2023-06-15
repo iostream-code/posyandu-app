@@ -53,12 +53,13 @@
                     <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
                     <li class="dropdown">
                         {{-- <a href="#"><span>Login/Register</span><i class="bi bi-chevron-down"></i></a> --}}
-                        <button class="nav-link btn-login"><span>Masuk</span> <i class="bi bi-chevron-down"></i></button>
+                        <button class="nav-link btn-login"><span>Masuk</span> <i
+                                class="bi bi-chevron-down"></i></button>
                         <ul class="mt-2">
                             @if (Route::has('login'))
                                 @auth
-                                    <a href="{{ url('/home') }}"
-                                        class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
+                                    <a href="{{ route('my-portal') }}"
+                                        class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">My Portal</a>
                                 @else
                                     <a href="{{ route('login') }}"
                                         class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Login</a>
