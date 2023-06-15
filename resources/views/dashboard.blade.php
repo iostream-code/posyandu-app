@@ -53,13 +53,26 @@
                     <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
                     <li class="dropdown">
                         {{-- <a href="#"><span>Login/Register</span><i class="bi bi-chevron-down"></i></a> --}}
-                        <button class="nav-link btn-login"><span>Masuk</span> <i
-                                class="bi bi-chevron-down"></i></button>
+                        @if (Auth::user())
+                            <button class="nav-link btn-login"><span>{{ Auth::user()->name }}</span> <i
+                                    class="bi bi-chevron-down"></i></button>
+                        @else
+                            <button class="nav-link btn-login"><span>Masuk</span> <i
+                                    class="bi bi-chevron-down"></i></button>
+                        @endif
                         <ul class="mt-2">
                             @if (Route::has('login'))
                                 @auth
                                     <a href="{{ route('my-portal') }}"
-                                        class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">My Portal</a>
+                                        class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">My
+                                        Portal</a>
+                                    <a href="{{ route('logout') }}"
+                                        class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">Logout</a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="post" class="d-none">
+                                        @csrf
+                                    </form>
                                 @else
                                     <a href="{{ route('login') }}"
                                         class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Login</a>
