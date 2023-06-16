@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\IbuHamilController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
 use App\Http\Controllers\ImunisasiController;
+use App\Http\Controllers\TimbanganController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,11 +18,11 @@ use App\Http\Controllers\ImunisasiController;
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
     return view('dashboard');
 })->name('dashboard');
-
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -34,3 +36,11 @@ Route::get('/admin', function () {
 
 //Admin
 Route::get('/admin/data-imunisasi', [ImunisasiController::class, 'index'])->name('data_imunisasi');
+Route::get('/admin/data-imunisasi/create', [ImunisasiController::class, 'create'])->name('create_imunisasi');
+
+Route::get('/admin/data-timbangan', [TimbanganController::class, 'index'])->name('data_timbangan');
+Route::get('/admin/data-timbangan/create', [TimbanganController::class, 'create'])->name('create_timbangan');
+
+Route::get('/admin/data-ibu-hamil', [IbuHamilController::class, 'index'])->name('data_ibu_hamil');
+Route::get('/admin/data-ibu-hamil/create', [IbuHamilController::class, 'create'])->name('create_data_ibu_hamil');
+

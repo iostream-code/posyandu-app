@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="section dashboard">
+    <section class="section dashboard">
         <div class="row">
             <div class="col-lg-12">
                 <!-- Customers Card -->
@@ -108,5 +108,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 @endsection

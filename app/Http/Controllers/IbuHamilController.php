@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\IbuHamil;
 use Illuminate\Http\Request;
 
 class IbuHamilController extends Controller
@@ -12,7 +11,7 @@ class IbuHamilController extends Controller
      */
     public function index()
     {
-        
+        return view('admin.ibu-hamil');
     }
 
     /**
@@ -20,7 +19,7 @@ class IbuHamilController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.ibu-hamil_create');
     }
 
     /**
@@ -34,7 +33,7 @@ class IbuHamilController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(IbuHamil $ibuHamil)
+    public function show(string $id)
     {
         //
     }
@@ -42,7 +41,7 @@ class IbuHamilController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(IbuHamil $ibuHamil)
+    public function edit(string $id)
     {
         //
     }
@@ -50,7 +49,7 @@ class IbuHamilController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, IbuHamil $ibuHamil)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -58,7 +57,7 @@ class IbuHamilController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(IbuHamil $ibuHamil)
+    public function destroy(string $id)
     {
         //
     }

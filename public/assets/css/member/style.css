@@ -789,6 +789,44 @@ section {
 }
 
 /*--------------------------------------------------------------
+# My-Portal
+--------------------------------------------------------------*/
+.my-portal .icon-box {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #f5f5ff;
+    transition: ease-in-out 0.3s;
+}
+
+.my-portal .icon-box i {
+    font-size: 32px;
+    padding-right: 10px;
+    line-height: 1;
+}
+
+.my-portal .icon-box h3 {
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-size: 16px;
+}
+
+.my-portal .icon-box h3 a {
+    color: #010483;
+    transition: ease-in-out 0.3s;
+}
+
+.my-portal .icon-box h3 a:hover {
+    color: #01036f;
+}
+
+.my-portal .icon-box:hover {
+    background: #ebebff;
+}
+
+/*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
 .features .icon-boxes h3 {
