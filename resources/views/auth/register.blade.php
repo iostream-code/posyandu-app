@@ -31,7 +31,6 @@
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
-                                    {{-- <div class="invalid-feedback">Please, enter your name!</div> --}}
                                 </div>
                                 <div class="col-12">
                                     <label for="email" class="form-label">Email</label>
@@ -43,7 +42,6 @@
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
-                                    {{-- <div class="invalid-feedback">Please enter a valid Email adddress!</div> --}}
                                 </div>
                                 <div class="col-12">
                                     <label for="password" class="form-label">Password</label>

@@ -32,18 +32,15 @@
 </head>
 
 <body>
-
-    <!-- ======= Header ======= -->
     <header id="header" class="fixed-top d-flex align-items-center">
         <div class="container d-flex align-items-center justify-content-between">
             <div class="navbar-brand">
                 <div class="d-flex justify-content-center align-items-center text-light">
-                    <img src="assets/img/logo.png" alt="Logo" height="40"
+                    <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" height="40"
                         class="d-inline-block align-text-top me-3">
                     <strong>Posyandu Dahlia 1</strong>
                 </div>
             </div>
-
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a class="nav-link scrollto" href="/#hero">Home</a></li>
@@ -52,7 +49,6 @@
                     <li><a class="nav-link scrollto" href="/#gallery">Galeri</a></li>
                     <li><a class="nav-link scrollto" href="/#contact">Kontak</a></li>
                     <li class="dropdown">
-                        {{-- <a href="#"><span>Login/Register</span><i class="bi bi-chevron-down"></i></a> --}}
                         @if (Auth::user())
                             <button class="nav-link btn-login"><span>{{ Auth::user()->name }}</span> <i
                                     class="bi bi-chevron-down"></i></button>
@@ -84,18 +80,14 @@
                             @endif
                         </ul>
                     </li>
-                    {{-- <li><button class="nav-link btn-login" href="#login">Masuk</button></li> --}}
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
-            <!-- .navbar -->
-
         </div>
     </header>
     <main id="main">
         <section class="breadcrumbs">
             <div class="container">
-
                 <div class="d-flex justify-content-between align-items-center">
                     <h2>My Portal</h2>
                     <ol>
@@ -126,7 +118,6 @@
 
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
-
 </body>
 
 </html>

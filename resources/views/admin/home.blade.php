@@ -19,15 +19,15 @@
                             </ul>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Customers <span>| This Year</span></h5>
+                            <h5 class="card-title">Users <span>| Until now</span></h5>
                             <div class="d-flex align-items-center">
                                 <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                                     <i class="bi bi-people"></i>
                                 </div>
                                 <div class="ps-3">
-                                    <h6>1244</h6>
-                                    <span class="text-danger small pt-1 fw-bold">12%</span> <span
-                                        class="text-muted small pt-2 ps-1">decrease</span>
+                                    <h6>30</h6>
+                                    <span class="text-success small pt-1 fw-bold">12%</span> <span
+                                        class="text-muted small pt-2 ps-1">increase</span>
                                 </div>
                             </div>
                         </div>
@@ -53,54 +53,26 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>1</td>
-                                    <td>Citra Putri</td>
-                                    <td>3578769018980</td>
-                                    <td>2023-05-25</td>
-                                    <td>087771628144</td>
-                                    <td>
-                                        <button class="btn btn-primary btn-sm"><i class="bi bi-search"></i></button>
-                                        <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>1</td>
-                                    <td>Citra Putri</td>
-                                    <td>3578769018980</td>
-                                    <td>2023-05-25</td>
-                                    <td>087771628144</td>
-                                    <td>
-                                        <button class="btn btn-primary btn-sm"><i class="bi bi-search"></i></button>
-                                        <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>1</td>
-                                    <td>Citra Putri</td>
-                                    <td>3578769018980</td>
-                                    <td>2023-05-25</td>
-                                    <td>087771628144</td>
-                                    <td>
-                                        <button class="btn btn-primary btn-sm"><i class="bi bi-search"></i></button>
-                                        <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>1</td>
-                                    <td>Citra Putri</td>
-                                    <td>3578769018980</td>
-                                    <td>2023-05-25</td>
-                                    <td>087771628144</td>
-                                    <td>
-                                        <button class="btn btn-primary btn-sm"><i class="bi bi-search"></i></button>
-                                        <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
-                                    </td>
-                                </tr>
+                                @foreach ($users as $user)
+                                    <tr>
+                                        <th scope="row">{{ $loop->iteration }}</th>
+                                        <td>{{ $user->id }}</td>
+                                        <td>{{ $user->name }}</td>
+                                        <td>3578012236578004</td>
+                                        <td>2023-05-25</td>
+                                        <td>
+                                            @if (isset($user->no_telp))
+                                                {{ $user->no_telp }}
+                                            @else
+                                                -
+                                            @endif
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary btn-sm" onclick="window.location='{{ route('user_detail', $user) }}'"><i class="bi bi-search"></i></button>
+                                            <button type="button" class="btn btn-danger btn-sm" onclick="window.location='{{ route('user_delete', $user) }}'"><i class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                         <!-- End Table with stripped rows -->
