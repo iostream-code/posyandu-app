@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('warga', function (Blueprint $table) {
+        Schema::create('wargas', function (Blueprint $table) {
             $table->id();
             $table->string('NIK');
             $table->foreignId('user_id')->constrained('users')->cascadeOnUpdate()->cascadeOnDelete();
             $table->date('tanggal_lahir');
             $table->string('no_telp');
+            $table->timestamps();
         });
     }
 

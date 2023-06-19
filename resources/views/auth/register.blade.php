@@ -31,7 +31,6 @@
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
-                                    {{-- <div class="invalid-feedback">Please, enter your name!</div> --}}
                                 </div>
                                 <div class="col-12">
                                     <label for="email" class="form-label">Email</label>
@@ -43,7 +42,6 @@
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
-                                    {{-- <div class="invalid-feedback">Please enter a valid Email adddress!</div> --}}
                                 </div>
                                 <div class="col-12">
                                     <label for="password" class="form-label">Password</label>
@@ -66,7 +64,7 @@
                                     <button class="btn btn-primary w-100" type="submit">Buat Akun</button>
                                 </div>
                                 <div class="col-12">
-                                    <p class="small mb-0">Sudah punya akun? <a href="{{ route('login') }}">Masuk diini!</a>
+                                    <p class="small mb-0">Sudah punya akun? <a href="{{ route('login') }}">Masuk disini!</a>
                                     </p>
                                 </div>
                             </form>

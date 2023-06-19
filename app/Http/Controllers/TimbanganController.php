@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Timbangan;
 use Illuminate\Http\Request;
 
 class TimbanganController extends Controller
@@ -12,7 +11,7 @@ class TimbanganController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.timbangan');
     }
 
     /**
@@ -20,7 +19,7 @@ class TimbanganController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.timbangan_create');
     }
 
     /**
@@ -34,7 +33,7 @@ class TimbanganController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Timbangan $timbangan)
+    public function show(string $id)
     {
         //
     }
@@ -42,7 +41,7 @@ class TimbanganController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Timbangan $timbangan)
+    public function edit(string $id)
     {
         //
     }
@@ -50,7 +49,7 @@ class TimbanganController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Timbangan $timbangan)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -58,7 +57,7 @@ class TimbanganController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Timbangan $timbangan)
+    public function destroy(string $id)
     {
         //
     }

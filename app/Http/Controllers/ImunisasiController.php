@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Imunisasi;
 use Illuminate\Http\Request;
 
 class ImunisasiController extends Controller
@@ -20,7 +19,7 @@ class ImunisasiController extends Controller
      */
     public function create()
     {
-        
+        return view('admin.imunisasi_create');
     }
 
     /**
@@ -34,7 +33,7 @@ class ImunisasiController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Imunisasi $imunisasi)
+    public function show(string $id)
     {
         //
     }
@@ -42,7 +41,7 @@ class ImunisasiController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Imunisasi $imunisasi)
+    public function edit(string $id)
     {
         //
     }
@@ -50,7 +49,7 @@ class ImunisasiController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Imunisasi $imunisasi)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -58,7 +57,7 @@ class ImunisasiController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Imunisasi $imunisasi)
+    public function destroy(string $id)
     {
         //
     }

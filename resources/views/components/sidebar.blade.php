@@ -20,12 +20,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route('data_ibu_hamil') }}">
                         <i class="bi bi-circle"></i><span>Ibu Hamil</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route('data_timbangan') }}">
                         <i class="bi bi-circle"></i><span>Timbangan</span>
                     </a>
                 </li>
@@ -48,10 +48,15 @@
         </li>
         <!-- End F.A.Q Page Nav -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ route('logout') }}">
-                <i class="bi bi-box-arrow-in-right"></i>
+            <a href="{{ route('logout') }}" class="nav-link collapsed"
+                onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                <i class="bi bi-box-arrow-right"></i>
                 <span>Logout</span>
             </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="post" class="d-none">
+                @csrf
+            </form>
         </li>
         <!-- End Login Page Nav -->
     </ul>
