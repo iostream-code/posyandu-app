@@ -67,11 +67,18 @@ class UserController extends Controller
     public function updateWarga(User $user, Request $request)
     {
         $user->update([
-            'NIK' => $request->NIK, 
-            'tanggal_lahir' => $request->tanggal_lahir,
-            'no_telp' => $request->no_telp
+            'name' => $request->name,
+            'email' => $request->email
         ]);
 
-        return redirect()->route('my-portal');
+        $user->warga->update([
+            'NIK' => $request->NIK, 
+            'tanggal_lahir' => $request->tanggal_lahir,
+            'no_telp' => $request->no_telp, 
+            'alamat' => $request->alamat, 
+            'pekerjaan' => $request->pekerjaan
+        ]);
+
+        return redirect()->route('profile_warga');
     }
 }

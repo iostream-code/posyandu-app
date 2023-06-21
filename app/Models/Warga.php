@@ -12,10 +12,12 @@ class Warga extends Model
     use HasFactory;
 
     protected $fillable = [
-        'NIK',
         'user_id',
+        'NIK',
         'tanggal_lahir',
         'no_telp', 
+        'alamat',
+        'pekerjaan'
     ];
 
     public function user()

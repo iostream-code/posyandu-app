@@ -10,7 +10,7 @@
                     <h5 class="card-title">Edit Data Timbangan</h5>
                     <form action="{{ route('update_timbangan', $timbangan) }}" method="post">
                         @csrf
-                        @method('update')
+                        @method('patch')
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label">User ID</label>
                             <div class="col-sm-10">
