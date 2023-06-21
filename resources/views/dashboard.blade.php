@@ -186,32 +186,34 @@
                     <div class="col-xl-10 col-lg-8 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5"
                         data-aos="fade-left">
                         <div class="section-title" data-aos="fade-up">
-                            <h2>Pelayanan</h2>
+                            <h2>Layanan</h2>
                             <p>Kami Melayani</p>
                         </div>
+                        <p>Jadwal kegiatan posyandu Dahlia 1 dilakukan secara rutin tanggal 21 setiap bulannya, yang berlokasi di rumah Ibu Laili Mukharomah
+                            RT 3 RW 1 Dusun Jetis, Desa Ngariboyo. Adapun program layanan yang dilakukan oleh Posyandu Dahlia 1 diantaranya :
+                        </p>
 
                         <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
                             <div class="icon"><i class="bx bx-fingerprint"></i></div>
-                            <h4 class="title"><a href="">Imunisasi Anak</a></h4>
-                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-                                praesentium debitis esse repellat commodi expedita quaerat mollitia recusandae eius
-                                quae!</p>
+                            <h4 class="title"><a href="">Timbangan</a></h4>
+                            <p class="description">Posyandu Dahlia 1 melayani program timbangan, dimana bayi dan balita akan di timbang berat badan dan diukur tinggi badannya untuk mengetahui
+                                perkembangan bayi dan balita yang ada di Dusun Jetis Desa Ngariboyo setiap bulannya.
+                            </p>
                         </div>
 
                         <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
                             <div class="icon"><i class="bx bx-gift"></i></div>
-                            <h4 class="title"><a href="">Cek Kesehatan</a></h4>
-                            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
-                                ratione voluptatibus perspiciatis illum aliquam excepturi corporis quae hic sequi
-                                impedit?</p>
+                            <h4 class="title"><a href="">Imunisasi</a></h4>
+                            <p class="description">Posyandu Dahlia 1 juga melayani program imunisasi bagi bayi dan balita, dimana imunisasi akan dilakukan secara bertahap sesuai dengan umur dan jenis vaksin agar kesehatan
+                                terjaga dan terhindar dari penyakit.
+                            </p>
                         </div>
 
                         <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
                             <div class="icon"><i class="bx bx-atom"></i></div>
                             <h4 class="title"><a href="">Cek Ibu Hamil</a></h4>
-                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-                                necessitatibus qui suscipit amet saepe veritatis tenetur, laudantium assumenda
-                                praesentium molestias?</p>
+                            <p class="description">Posyandu Dahlia 1 juga melayani cek kesehatan ibu hamil untuk mengetahui perkembangan janin dan kesehatan ibu agar terhindar dari 
+                                resiko yang tidak diinginkan. </p>
                         </div>
                     </div>
                 </div>
@@ -296,7 +298,7 @@
         <!-- End Features Section -->
 
         <!-- ======= Details Section ======= -->
-        <section id="details" class="details">
+        <!-- <section id="details" class="details">
             <div class="container">
 
                 <div class="row content">
@@ -409,7 +411,7 @@
                 </div> --}}
 
             </div>
-        </section>
+        </section> -->
         <!-- End Details Section -->
 
         <!-- ======= Gallery Section ======= -->
@@ -528,7 +530,7 @@
 
                     </div>
 
-                    <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
+                    <!-- <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
 
                         <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                             <div class="row">
@@ -556,7 +558,7 @@
                             <div class="text-center"><button type="submit">Kirim</button></div>
                         </form>
 
-                    </div>
+                    </div> -->
 
                 </div>
 
@@ -575,37 +577,35 @@
 
                     <div class="col-lg-6 col-md-8">
                         <div class="footer-info">
-                            <h3>Bootslander</h3>
-                            <p class="pb-3"><em>Qui repudiandae et eum dolores alias sed ea. Qui suscipit veniam
-                                    excepturi quod.</em></p>
+                            <h3>Posyandu Dahlia 1</h3>
+                            <p class="pb-3"><em>Menjadikan masyarakat yang sehat, cerdas dan mandiri</em></p>
                             <p>
-                                A108 Adam Street <br>
-                                NY 535022, USA<br><br>
-                                <strong>Phone:</strong> +1 5589 55488 55<br>
-                                <strong>Email:</strong> info@example.com<br>
+                                Jl. Eang Singogati <br>
+                                Dsn. Jetis, RT 3 RW 1,
+                                Ds. Ngariboyo, Kab. Magetan<br><br>
+                                <strong>Telepon:</strong> +62 857-3506-8205<br>
+                                <strong>Email:</strong> posyandudahlia1@gmail.com<br>
                             </p>
                         </div>
                     </div>
 
                     <div class="col-lg-2 col-md-6 footer-links">
-                        <h4>Useful Links</h4>
+                        <h4>Link</h4>
                         <ul>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Tentang</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Jadwal</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Galeri</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Kontak</a></li>
                         </ul>
                     </div>
 
                     <div class="col-lg-2 col-md-6 footer-links">
-                        <h4>Layanan Kami</h4>
+                        <h4>Layanan</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Timbangan</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Imunisasi</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Cek Ibu Hamil</a></li>
                         </ul>
                     </div>
 
@@ -615,11 +615,11 @@
 
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong><span>Bootslander</span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span>Posyandu Dahlia 1</span></strong>. All Rights Reserved
             </div>
-            <div class="credits">
+            <!-- <div class="credits">
                 Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
+            </div> -->
         </div>
     </footer>
     <!-- End Footer -->
