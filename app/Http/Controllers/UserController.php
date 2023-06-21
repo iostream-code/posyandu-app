@@ -70,10 +70,18 @@ class UserController extends Controller
 
     public function updateWarga(User $user, Request $request)
     {
-        $user->update([
-            'name' => $request->name,
-            'email' => $request->email
-        ]);
+        if (Auth::user()->is_admin) {
+            $user->update([
+                'name' => $request->name,
+                'email' => $request->email,
+                'is_admin' => $request->is_admin
+            ]);
+        } else {
+            $user->update([
+                'name' => $request->name,
+                'email' => $request->email
+            ]);
+        }
 
         $user->warga->update([
             'NIK' => $request->NIK,
