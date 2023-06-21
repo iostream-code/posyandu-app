@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('imunisasis', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->string('nama');
+            $table->date('tanggal_lahir');
             $table->string('jenis_imunisasi');
             $table->date('tanggal_imunisasi');
         });

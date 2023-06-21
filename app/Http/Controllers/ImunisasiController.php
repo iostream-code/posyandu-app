@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Imunisasi;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class ImunisasiController extends Controller
 {
@@ -11,7 +14,9 @@ class ImunisasiController extends Controller
      */
     public function index()
     {
-        return view('admin.imunisasi');
+        $imunisasi = Imunisasi::all();
+
+        return view('admin.imunisasi', compact('imunisasi'));
     }
 
     /**
@@ -19,7 +24,9 @@ class ImunisasiController extends Controller
      */
     public function create()
     {
-        return view('admin.imunisasi_create');
+        $users = User::where('is_admin', false)->get();
+
+        return view('admin.imunisasi_create', compact('users'));
     }
 
     /**
@@ -27,38 +34,59 @@ class ImunisasiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Imunisasi::create([
+            'user_id' => $request->user_id,
+            'nama' => $request->nama,
+            'tanggal_lahir' => $request->tanggal_lahir,
+            'jenis_imunisasi' => $request->jenis_imunisasi,
+            'tanggal_imunisasi' => $request->tanggal_imunisasi,
+        ]);
+
+        return redirect()->route('data_imunisasi');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Imunisasi $imunisasi)
     {
-        //
+        $user = User::where('id', $imunisasi->user_id)->first();
+        return view('admin.imunisasi_show', compact('imunisasi', 'user'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Imunisasi $imunisasi)
     {
-        //
+        $users = User::where('is_admin', false)->get();
+
+        return view('admin.imunisasi_edit', compact('imunisasi', 'users'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Imunisasi $imunisasi)
     {
-        //
+        $imunisasi->update([
+            'user_id' => $request->user_id,
+            'nama' => $request->nama,
+            'tanggal_lahir' => $request->tanggal_lahir,
+            'jenis_imunisasi' => $request->jenis_imunisasi,
+            'tanggal_imunisasi' => $request->tanggal_imunisasi,
+        ]);
+
+        return redirect()->route('show_imunisasi', compact('imunisasi'));
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function delete(Imunisasi $imunisasi)
     {
-        //
+        $imunisasi->delete();
+
+        return redirect()->route('data_imunisasi');
     }
 }

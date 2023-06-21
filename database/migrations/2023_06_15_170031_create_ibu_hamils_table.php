@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('ibu_hamils', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->string('nama');
+            $table->date('tanggal_lahir');
             $table->integer('kehamilan_ke');
             $table->integer('umur_kehamilan');
             $table->char('golongan_darah');

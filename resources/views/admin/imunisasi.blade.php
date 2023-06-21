@@ -26,17 +26,26 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Citra Putri</td>
-                                    <td>2001-05-25</td>
-                                    <td>Campak, Polio, BCG</td>
-                                    <td>2023-05-25</td>
-                                    <td>
-                                        <button class="btn btn-primary btn-sm"><i class="bi bi-search"></i></button>
-                                        <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
-                                    </td>
-                                </tr>
+                                @foreach ($imunisasi as $data)
+                                    <tr>
+                                        <th scope="row">{{ $loop->iteration }}</th>
+                                        <td>{{ $data->nama }}</td>
+                                        <td>{{ date('d-m-Y', strtotime($data->tanggal_lahir)) }}</td>
+                                        <td>{{ $data->jenis_imunisasi }}</td>
+                                        <td>{{ date('d-m-Y', strtotime($data->tanggal_imunisasi)) }}</td>
+                                        <td class="d-flex flex-row gap-2">
+                                            <button type="button"
+                                                onclick="window.location='{{ route('show_imunisasi', $data) }}'"
+                                                class="btn btn-primary btn-sm"><i class="bi bi-search"></i></button>
+                                            <form action="{{ route('delete_imunisasi', $data) }}" method="post">
+                                                @csrf
+                                                @method('delete')
+                                                <button type="submit" class="btn btn-danger btn-sm"><i
+                                                        class="bi bi-trash"></i></button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                         <!-- End Table with stripped rows -->
