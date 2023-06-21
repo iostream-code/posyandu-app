@@ -9,10 +9,11 @@ class IbuHamil extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $fillable = [
         'user_id',
         'nama',
-        'tanggal_lahir',
         'kehamilan_ke',
         'umur_kehamilan',
         'golongan_darah',

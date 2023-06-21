@@ -14,7 +14,7 @@
                                 onclick="window.location='{{ route('create_imunisasi') }}'">Tambah Data</button>
                         </div>
                         <!-- Table with stripped rows -->
-                        <table class="table datatable">
+                        <table class="table">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
@@ -33,16 +33,20 @@
                                         <td>{{ date('d-m-Y', strtotime($data->tanggal_lahir)) }}</td>
                                         <td>{{ $data->jenis_imunisasi }}</td>
                                         <td>{{ date('d-m-Y', strtotime($data->tanggal_imunisasi)) }}</td>
-                                        <td class="d-flex flex-row gap-2">
-                                            <button type="button"
-                                                onclick="window.location='{{ route('show_imunisasi', $data) }}'"
-                                                class="btn btn-primary btn-sm"><i class="bi bi-search"></i></button>
-                                            <form action="{{ route('delete_imunisasi', $data) }}" method="post">
-                                                @csrf
-                                                @method('delete')
-                                                <button type="submit" class="btn btn-danger btn-sm"><i
-                                                        class="bi bi-trash"></i></button>
-                                            </form>
+                                        <td>
+                                            <div class="d-flex flex-row gap-2">
+                                                <form action="{{ route('show_imunisasi', $data) }}" method="get">
+                                                    @csrf
+                                                    <button type="submit" class="btn btn-primary btn-sm"><i
+                                                            class="bi bi-search"></i></button>
+                                                </form>
+                                                <form action="{{ route('delete_imunisasi', $data) }}" method="post">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i
+                                                            class="bi bi-trash"></i></button>
+                                                </form>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach

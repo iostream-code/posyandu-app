@@ -46,9 +46,19 @@ Route::delete('/admin/data-imunisasi/{imunisasi}/delete', [ImunisasiController::
 
 Route::get('/admin/data-timbangan', [TimbanganController::class, 'index'])->name('data_timbangan');
 Route::get('/admin/data-timbangan/create', [TimbanganController::class, 'create'])->name('create_timbangan');
+Route::post('/admin/data-timbangan/create', [TimbanganController::class, 'store'])->name('store_timbangan');
+Route::get('/admin/data-timbangan/{timbangan}', [TimbanganController::class, 'show'])->name('show_timbangan');
+Route::get('/admin/data-timbangan/{timbangan}/edit', [TimbanganController::class, 'edit'])->name('edit_timbangan');
+Route::patch('/admin/data-timbangan/{timbangan}/edit', [TimbanganController::class, 'update'])->name('update_timbangan');
+Route::delete('/admin/data-timbangan/{timbangan}/delete', [TimbanganController::class, 'delete'])->name('delete_timbangan');
 
 Route::get('/admin/data-ibu-hamil', [IbuHamilController::class, 'index'])->name('data_ibu_hamil');
 Route::get('/admin/data-ibu-hamil/create', [IbuHamilController::class, 'create'])->name('create_data_ibu_hamil');
+Route::post('/admin/data-ibu-hamil/create', [IbuHamilController::class, 'store'])->name('store_data_ibu_hamil');
+Route::get('/admin/data-ibu-hamil/{ibuhamil}', [IbuHamilController::class, 'show'])->name('show_data_ibu_hamil');
+Route::get('/admin/data-ibu-hamil/{ibuhamil}/edit', [IbuHamilController::class, 'edit'])->name('edit_data_ibu_hamil');
+Route::patch('/admin/data-ibu-hamil/{ibuhamil}/edit', [IbuHamilController::class, 'update'])->name('update_data_ibu_hamil');
+Route::delete('/admin/data-ibu-hamil/{ibuhamil}/delete', [IbuHamilController::class, 'delete'])->name('delete_data_ibu_hamil');
 
 //User
 Route::get('/my-portal/profile-saya', [UserController::class, 'showWarga'])->name('profile_warga');

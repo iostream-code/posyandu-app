@@ -7,7 +7,7 @@
         <div class="row">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Tambah Data Imunisasi</h5>
+                    <h5 class="card-title">Edit Data Imunisasi</h5>
                     <form action="{{ route('update_imunisasi', $imunisasi) }}" method="post">
                         @csrf
                         @method('patch')
@@ -47,7 +47,7 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Save</button>
                             <button type="reset" class="btn btn-secondary">Reset</button>
                         </div>
                     </form>

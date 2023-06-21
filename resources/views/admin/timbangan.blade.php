@@ -14,11 +14,12 @@
                                 onclick="window.location='{{ route('create_timbangan') }}'">Tambah Data</button>
                         </div>
                         <!-- Table with stripped rows -->
-                        <table class="table datatable">
+                        <table class="table">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Nama</th>
+                                    <th scope="col">Tanggal Lahir</th>
                                     <th scope="col">Usia</th>
                                     <th scope="col">Nama Ayah/Ibu</th>
                                     <th scope="col">Lingkar Kepala</th>
@@ -29,20 +30,34 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Citra Putri</td>
-                                    <td>5 thn</td>
-                                    <td>Aisyah</td>
-                                    <td>45 cm</td>
-                                    <td>32 cm</td>
-                                    <td>2,2 Kg</td>
-                                    <td>23/05/2023</td>
-                                    <td>
-                                        <button class="btn btn-primary btn-sm"><i class="bi bi-search"></i></button>
-                                        <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
-                                    </td>
-                                </tr>
+                                @foreach ($timbangan as $data)
+                                    <tr>
+                                        <th scope="row">{{ $loop->iteration }}</th>
+                                        <td>{{ $data->nama }}</td>
+                                        <td>{{ date('d-m-Y', strtotime($data->tanggal_lahir)) }}</td>
+                                        <td>{{ $data->umur }}</td>
+                                        <td>{{ $data->nama_orangtua }}</td>
+                                        <td>{{ $data->lingkar_kepala }}</td>
+                                        <td>{{ $data->tinggi_badan }}</td>
+                                        <td>{{ $data->berat_badan }}</td>
+                                        <td>{{ date('d-m-Y', strtotime($data->tanggal_periksa)) }}</td>
+                                        <td>
+                                            <div class="d-flex flex-row gap-2">
+                                                <form action="{{ route('show_timbangan', $data) }}" method="get">
+                                                    @csrf
+                                                    <button type="submit" class="btn btn-primary btn-sm"><i
+                                                            class="bi bi-search"></i></button>
+                                                </form>
+                                                <form action="{{ route('delete_timbangan', $data) }}" method="post">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i
+                                                            class="bi bi-trash"></i></button>
+                                                </form>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                         <!-- End Table with stripped rows -->

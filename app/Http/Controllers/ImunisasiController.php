@@ -51,6 +51,7 @@ class ImunisasiController extends Controller
     public function show(Imunisasi $imunisasi)
     {
         $user = User::where('id', $imunisasi->user_id)->first();
+        
         return view('admin.imunisasi_show', compact('imunisasi', 'user'));
     }
 

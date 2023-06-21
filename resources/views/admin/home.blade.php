@@ -1,5 +1,7 @@
 @extends('layouts.admin')
 
+@section('page-header', 'Users')
+
 @section('content')
     <section class="section dashboard">
         <div class="row">
@@ -44,7 +46,6 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">id</th>
                                     <th scope="col">Nama</th>
                                     <th scope="col">NIK</th>
                                     <th scope="col">Tanggal Lahir</th>
@@ -56,7 +57,6 @@
                                 @foreach ($users as $user)
                                     <tr>
                                         <th scope="row">{{ $loop->iteration }}</th>
-                                        <td>{{ $user->id }}</td>
                                         <td>{{ $user->name }}</td>
                                         <td>3578012236578004</td>
                                         <td>2023-05-25</td>
