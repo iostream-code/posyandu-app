@@ -27,11 +27,7 @@ class UserController extends Controller
         $user->delete();
         return redirect()->route('admin');
     }
-
-    public function indexWarga()
-    {
-    }
-
+    
     public function createWarga()
     {
         if (Auth::user()->is_admin == false)
