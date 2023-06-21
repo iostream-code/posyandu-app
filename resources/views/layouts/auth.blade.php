@@ -32,7 +32,7 @@
     <link href="{{ asset('assets/vendor/simple-datatables/style.css') }}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="{{ asset('assets/css/admin/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/admin.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -59,7 +59,7 @@
     <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
 
     <!-- Template Main JS File -->
-    <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ asset('assets/js/admin.js') }}"></script>
 
 </body>
 

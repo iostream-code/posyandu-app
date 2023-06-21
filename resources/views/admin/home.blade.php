@@ -42,7 +42,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Daftar User</h5>
                         <!-- Table with stripped rows -->
-                        <table class="table datatable">
+                        <table class="table">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>

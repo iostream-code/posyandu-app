@@ -10,7 +10,7 @@ use App\Models\Warga;
 
 class UserController extends Controller
 {
-    public function show()
+    public function admin()
     {
         $users = User::where('is_admin', false)->get();
 
@@ -55,7 +55,7 @@ class UserController extends Controller
     public function showWarga()
     {
         $user = User::where('id', Auth::id())->first();
-
+        
         return view('customer.warga_profile', compact('user'));
     }
 

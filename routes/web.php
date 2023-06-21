@@ -32,7 +32,7 @@ Route::get('/my-portal', function () {
 })->name('my-portal');
 
 //Admin
-Route::get('/admin', [UserController::class, 'show'])->name('admin');
+Route::get('/admin', [UserController::class, 'admin'])->name('admin');
 Route::get('/admin/user/{user}', [UserController::class, 'detail'])->name('user_detail');
 Route::get('/admin/user/{user}/delete', [UserController::class, 'delete'])->name('user_delete');
 
