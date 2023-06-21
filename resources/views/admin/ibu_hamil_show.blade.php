@@ -23,7 +23,7 @@
                                     <th scope="col">Golongan Darah</th>
                                     <th scope="col">Tinggi Badan</th>
                                     <th scope="col">Berat badan</th>
-                                    <th scope="col">Tanggal Kehamilan</th>
+                                    <th scope="col">Tanggal Periksa</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -34,7 +34,7 @@
                                     <td>{{ $ibuhamil->golongan_darah }}</td>
                                     <td>{{ $ibuhamil->tinggi_badan }}</td>
                                     <td>{{ $ibuhamil->berat_badan }}</td>
-                                    <td>{{ date('d-m-Y', strtotime($ibuhamil->tanggal_kehamilan)) }}</td>
+                                    <td>{{ date('d-m-Y', strtotime($ibuhamil->tanggal_periksa)) }}</td>
                                 </tr>
                             </tbody>
                         </table>
