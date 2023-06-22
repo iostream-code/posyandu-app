@@ -27,11 +27,7 @@ class UserController extends Controller
         $user->delete();
         return redirect()->route('admin');
     }
-
-    public function indexWarga()
-    {
-    }
-
+    
     public function createWarga()
     {
         if (Auth::user()->is_admin == false)
@@ -42,10 +38,12 @@ class UserController extends Controller
     public function storeWarga(Request $request)
     {
         $warga = new Warga([
-            'NIK' => $request->NIK,
             'user_id' => Auth::id(),
+            'NIK' => $request->NIK,
             'tanggal_lahir' => $request->tanggal_lahir,
-            'no_telp' => $request->no_telp
+            'no_telp' => $request->no_telp,
+            'alamat' => $request->alamat,
+            'pekerjaan' => $request->pekerjaan
         ]);
         $warga->save();
 
@@ -55,8 +53,10 @@ class UserController extends Controller
     public function showWarga()
     {
         $user = User::where('id', Auth::id())->first();
-        
-        return view('customer.warga_profile', compact('user'));
+
+        if (isset($user->warga))
+            return view('customer.warga_profile', compact('user'));
+        return redirect()->route('create_warga');
     }
 
     public function editWarga(User $user)
@@ -66,12 +66,27 @@ class UserController extends Controller
 
     public function updateWarga(User $user, Request $request)
     {
-        $user->update([
-            'NIK' => $request->NIK, 
+        if (Auth::user()->is_admin) {
+            $user->update([
+                'name' => $request->name,
+                'email' => $request->email,
+                'is_admin' => $request->is_admin
+            ]);
+        } else {
+            $user->update([
+                'name' => $request->name,
+                'email' => $request->email
+            ]);
+        }
+
+        $user->warga->update([
+            'NIK' => $request->NIK,
             'tanggal_lahir' => $request->tanggal_lahir,
-            'no_telp' => $request->no_telp
+            'no_telp' => $request->no_telp,
+            'alamat' => $request->alamat,
+            'pekerjaan' => $request->pekerjaan
         ]);
 
-        return redirect()->route('my-portal');
+        return redirect()->route('profile_warga');
     }
 }

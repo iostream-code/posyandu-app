@@ -25,6 +25,18 @@
                             <input type="text" name="no_telp" class="form-control" id="telp">
                         </div>
                     </div>
+                    <div class="row mb-3">
+                        <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="alamat" class="form-control" id="alamat">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="pekerjaan" class="col-sm-2 col-form-label">Pekerjaan</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="pekerjaan" class="form-control" id="pekerjaan">
+                        </div>
+                    </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary">Submit</button>
                         <button type="reset" class="btn btn-secondary">Reset</button>

@@ -19,7 +19,7 @@ class IbuHamil extends Model
         'golongan_darah',
         'tinggi_badan',
         'berat_badan',
-        'tanggal_kehamilan'
+        'tanggal_periksa'
     ];
 
     public function datas()

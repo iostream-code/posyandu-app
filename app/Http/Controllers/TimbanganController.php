@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Timbangan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TimbanganController extends Controller
 {
@@ -13,9 +14,15 @@ class TimbanganController extends Controller
      */
     public function index()
     {
-        $timbangan = Timbangan::all();
+        if (Auth::user()->is_admin) {
+            $timbangan = Timbangan::all();
 
-        return view('admin.timbangan', compact('timbangan'));
+            return view('admin.timbangan', compact('timbangan'));
+        } else {
+            $timbangan = Timbangan::where('id', Auth::id())->get();
+
+            return view('customer.data_timbangan', compact('timbangan'));
+        }
     }
 
     /**

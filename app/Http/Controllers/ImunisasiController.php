@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Imunisasi;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class ImunisasiController extends Controller
 {
@@ -14,9 +15,15 @@ class ImunisasiController extends Controller
      */
     public function index()
     {
-        $imunisasi = Imunisasi::all();
+        if (Auth::user()->is_admin) {
+            $imunisasi = Imunisasi::all();
 
-        return view('admin.imunisasi', compact('imunisasi'));
+            return view('admin.imunisasi', compact('imunisasi'));
+        } else {
+            $imunisasi = Imunisasi::where('id', Auth::id())->get();
+
+            return view('customer.data_imunisasi', compact('imunisasi'));
+        }
     }
 
     /**
@@ -51,7 +58,7 @@ class ImunisasiController extends Controller
     public function show(Imunisasi $imunisasi)
     {
         $user = User::where('id', $imunisasi->user_id)->first();
-        
+
         return view('admin.imunisasi_show', compact('imunisasi', 'user'));
     }
 

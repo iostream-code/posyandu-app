@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\IbuHamil;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class IbuHamilController extends Controller
 {
@@ -13,9 +14,15 @@ class IbuHamilController extends Controller
      */
     public function index()
     {
-        $ibu_hamil = IbuHamil::all();
+        if (Auth::user()->is_admin) {
+            $ibu_hamil = IbuHamil::all();
 
-        return view('admin.ibu-hamil', compact('ibu_hamil'));
+            return view('admin.ibu-hamil', compact('ibu_hamil'));
+        } else {
+            $ibu_hamil = IbuHamil::where('id', Auth::id())->get();
+
+            return view('customer.data_ibu_hamil', compact('ibu_hamil'));
+        }
     }
 
     /**
@@ -80,7 +87,7 @@ class IbuHamilController extends Controller
             'golongan_darah' => $request->golongan_darah,
             'tinggi_badan' => $request->tinggi_badan,
             'berat_badan' => $request->berat_badan,
-            'tanggal_kehamilan' => $request->tanggal_kehamilan
+            'tanggal_periksa' => $request->tanggal_kehamilan
         ]);
 
         return redirect()->route('show_data_ibu_hamil', compact('ibuhamil'));

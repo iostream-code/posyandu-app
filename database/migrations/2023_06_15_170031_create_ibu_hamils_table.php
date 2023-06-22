@@ -20,7 +20,7 @@ return new class extends Migration
             $table->char('golongan_darah');
             $table->integer('tinggi_badan');
             $table->integer('berat_badan');
-            $table->date('tanggal_kehamilan');
+            $table->date('tanggal_periksa');
         });
     }
 

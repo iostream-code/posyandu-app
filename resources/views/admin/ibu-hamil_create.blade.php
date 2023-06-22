@@ -58,9 +58,9 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="date" class="col-sm-2 col-form-label">Tanggal Kehamilan</label>
+                            <label for="date" class="col-sm-2 col-form-label">Tanggal Periksa</label>
                             <div class="col-sm-10">
-                                <input type="date" name="tanggal_kehamilan" class="form-control" id="date">
+                                <input type="date" name="tanggal_periksa" class="form-control" id="date">
                             </div>
                         </div>
                         <div class="text-center">
