@@ -190,8 +190,11 @@
                             <p>Kami Melayani</p>
                         </div>
 
+                        <p class="text_layanan">Jadwal kegiatan posyandu Dahlia 1 dilakukan secara rutin tanggal 21 setiap bulannya, yang berlokasi di rumah Ibu Laili Mukharomah RT 3 RW 1 Dusun Jetis, Desa Ngariboyo.
+                            Adapun program layanan yang dilakukan oleh Posyandu Dahlia 1 diantaranya :
+                        </p>
+
                         <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="icon"><i class="bx bx-fingerprint"></i></div>
                             <h4 class="title"><a href="">Timbangan</a></h4>
                             <p class="description">Posyandu Dahlia 1 melayani program timbangan, dimana bayi dan balita
                                 akan di timbang berat badan dan diukur tinggi badannya untuk mengetahui
@@ -200,7 +203,6 @@
                         </div>
 
                         <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="icon"><i class="bx bx-gift"></i></div>
                             <h4 class="title"><a href="">Imunisasi</a></h4>
                             <p class="description">Posyandu Dahlia 1 juga melayani program imunisasi bagi bayi dan
                                 balita, dimana imunisasi akan dilakukan secara bertahap sesuai dengan umur dan jenis
@@ -210,7 +212,6 @@
                         </div>
 
                         <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
-                            <div class="icon"><i class="bx bx-atom"></i></div>
                             <h4 class="title"><a href="">Cek Ibu Hamil</a></h4>
                             <p class="description">Posyandu Dahlia 1 juga melayani cek kesehatan ibu hamil untuk
                                 mengetahui perkembangan janin dan kesehatan ibu agar terhindar dari

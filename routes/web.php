@@ -36,7 +36,7 @@ Route::get('/admin', [UserController::class, 'admin'])->name('admin');
 Route::get('/admin/user/{user}', [UserController::class, 'detail'])->name('user_detail');
 Route::get('/admin/user/{user}/delete', [UserController::class, 'delete'])->name('user_delete');
 
-Route::get('/admin/data-imunisasi', [ImunisasiController::class, 'index'])->name('data_imunisasi');
+Route::get('/data-imunisasi', [ImunisasiController::class, 'index'])->name('data_imunisasi');
 Route::get('/admin/data-imunisasi/create', [ImunisasiController::class, 'create'])->name('create_imunisasi');
 Route::post('/admin/data-imunisasi/create', [ImunisasiController::class, 'store'])->name('store_imunisasi');
 Route::get('/admin/data-imunisasi/{imunisasi}', [ImunisasiController::class, 'show'])->name('show_imunisasi');
@@ -44,7 +44,7 @@ Route::get('/admin/data-imunisasi/{imunisasi}/edit', [ImunisasiController::class
 Route::patch('/admin/data-imunisasi/{imunisasi}/edit', [ImunisasiController::class, 'update'])->name('update_imunisasi');
 Route::delete('/admin/data-imunisasi/{imunisasi}/delete', [ImunisasiController::class, 'delete'])->name('delete_imunisasi');
 
-Route::get('/admin/data-timbangan', [TimbanganController::class, 'index'])->name('data_timbangan');
+Route::get('/data-timbangan', [TimbanganController::class, 'index'])->name('data_timbangan');
 Route::get('/admin/data-timbangan/create', [TimbanganController::class, 'create'])->name('create_timbangan');
 Route::post('/admin/data-timbangan/create', [TimbanganController::class, 'store'])->name('store_timbangan');
 Route::get('/admin/data-timbangan/{timbangan}', [TimbanganController::class, 'show'])->name('show_timbangan');
@@ -52,7 +52,7 @@ Route::get('/admin/data-timbangan/{timbangan}/edit', [TimbanganController::class
 Route::patch('/admin/data-timbangan/{timbangan}/edit', [TimbanganController::class, 'update'])->name('update_timbangan');
 Route::delete('/admin/data-timbangan/{timbangan}/delete', [TimbanganController::class, 'delete'])->name('delete_timbangan');
 
-Route::get('/admin/data-ibu-hamil', [IbuHamilController::class, 'index'])->name('data_ibu_hamil');
+Route::get('/data-ibu-hamil', [IbuHamilController::class, 'index'])->name('data_ibu_hamil');
 Route::get('/admin/data-ibu-hamil/create', [IbuHamilController::class, 'create'])->name('create_data_ibu_hamil');
 Route::post('/admin/data-ibu-hamil/create', [IbuHamilController::class, 'store'])->name('store_data_ibu_hamil');
 Route::get('/admin/data-ibu-hamil/{ibuhamil}', [IbuHamilController::class, 'show'])->name('show_data_ibu_hamil');
