@@ -14,7 +14,7 @@
                                 onclick="window.location='{{ route('edit_imunisasi', $imunisasi) }}'">Edit Data</button>
                         </div>
                         <!-- Table with stripped rows -->
-                        <table class="table datatable">
+                        <table class="table">
                             <thead>
                                 <tr>
                                     <th scope="col">Nama</th>

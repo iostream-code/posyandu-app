@@ -102,6 +102,6 @@ class TimbanganController extends Controller
     {
         $timbangan->delete();
 
-        return redirect()->route('timbangan');
+        return redirect()->route('data_timbangan');
     }
 }

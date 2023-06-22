@@ -48,7 +48,7 @@ class IbuHamilController extends Controller
             'golongan_darah' => $request->golongan_darah,
             'tinggi_badan' => $request->tinggi_badan,
             'berat_badan' => $request->berat_badan,
-            'tanggal_kehamilan' => $request->tanggal_kehamilan
+            'tanggal_periksa' => $request->tanggal_periksa
         ]);
 
         return redirect()->route('data_ibu_hamil');
