@@ -20,7 +20,7 @@ class ImunisasiController extends Controller
 
             return view('admin.imunisasi', compact('imunisasi'));
         } else {
-            $imunisasi = Imunisasi::where('id', Auth::id())->get();
+            $imunisasi = Imunisasi::where('user_id', Auth::id())->get();
 
             return view('customer.data_imunisasi', compact('imunisasi'));
         }

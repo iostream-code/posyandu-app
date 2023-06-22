@@ -19,7 +19,7 @@ class TimbanganController extends Controller
 
             return view('admin.timbangan', compact('timbangan'));
         } else {
-            $timbangan = Timbangan::where('id', Auth::id())->get();
+            $timbangan = Timbangan::where('user_id', Auth::id())->get();
 
             return view('customer.data_timbangan', compact('timbangan'));
         }

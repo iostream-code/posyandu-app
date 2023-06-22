@@ -61,6 +61,9 @@ Route::patch('/admin/data-ibu-hamil/{ibuhamil}/edit', [IbuHamilController::class
 Route::delete('/admin/data-ibu-hamil/{ibuhamil}/delete', [IbuHamilController::class, 'delete'])->name('delete_data_ibu_hamil');
 
 //User
+Route::get('/my-portal/data-imunisasi', [ImunisasiController::class, 'index'])->name('customer_data_imunisasi');
+Route::get('/my-portal/data-timbangan', [TimbanganController::class, 'index'])->name('customer_data_timbangan');
+Route::get('/my-portal/data-ibu-hamil', [IbuHamilController::class, 'index'])->name('customer_data_ibu_hamil');
 Route::get('/my-portal/profile-saya', [UserController::class, 'showWarga'])->name('profile_warga');
 Route::get('/my-portal/lengkapi-data', [UserController::class, 'createWarga'])->name('create_warga');
 Route::post('/my-portal/lengkapi-data', [UserController::class, 'storeWarga'])->name('store_warga');

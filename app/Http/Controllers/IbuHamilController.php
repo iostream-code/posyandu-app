@@ -59,7 +59,7 @@ class IbuHamilController extends Controller
      */
     public function show(IbuHamil $ibuhamil)
     {
-        $user = User::where('id', $ibuhamil->user_id)->first();
+        $user = User::where('user_id', $ibuhamil->user_id)->first();
 
         return view('admin.ibu_hamil_show', compact('ibuhamil', 'user'));
     }
