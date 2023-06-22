@@ -108,14 +108,14 @@
                                         <div class="col-md-8 col-lg-9">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="is_admin"
-                                                    id="anggota" value="false">
+                                                    id="anggota" value="0">
                                                 <label class="form-check-label" for="anggota">
                                                     Anggota
                                                 </label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="is_admin"
-                                                    id="kader" value="true">
+                                                    id="kader" value="1">
                                                 <label class="form-check-label" for="kader">
                                                     Kader
                                                 </label>
