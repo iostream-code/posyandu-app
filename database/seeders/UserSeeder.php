@@ -24,31 +24,31 @@ class UserSeeder extends Seeder
             [
                 'name' => 'Bu Maryati',
                 'email' => 'user1@gmail.com',
-                'password' => Hash::make('user123'),
+                'password' => Hash::make('users123'),
                 'is_admin' => false,
             ],
             [
                 'name' => 'Bu Hendra',
                 'email' => 'user2@gmail.com',
-                'password' => Hash::make('user234'),
+                'password' => Hash::make('users234'),
                 'is_admin' => false,
             ],
             [
                 'name' => 'Mbak Ery',
                 'email' => 'user3@gmail.com',
-                'password' => Hash::make('user345'),
+                'password' => Hash::make('users345'),
                 'is_admin' => false,
             ],
             [
                 'name' => 'Bu Aisyah',
                 'email' => 'user4@gmail.com',
-                'password' => Hash::make('user456'),    
+                'password' => Hash::make('users456'),    
                 'is_admin' => false,
             ],
             [
                 'name' => 'Mbak Rani',
                 'email' => 'user5@gmail.com',
-                'password' => Hash::make('user567'),
+                'password' => Hash::make('users567'),
                 'is_admin' => false,
             ],
         ];
