@@ -10,7 +10,8 @@
                     <div class="card-body">
                         <div class="d-flex flex-row justify-content-between align-items-center">
                             <h5 class="card-title">Data Kehamilan {{ $user->name }}</h5>
-                            <button type="button" class="btn btn-success btn-sm" onclick="window.location='{{ route('edit_data_ibu_hamil', $ibuhamil) }}'">Edit
+                            <button type="button" class="btn btn-success btn-sm"
+                                onclick="window.location='{{ route('edit_data_ibu_hamil', $ibuhamil) }}'">Edit
                                 Data</button>
                         </div>
                         <!-- Table with stripped rows -->
@@ -21,8 +22,8 @@
                                     <th scope="col">Kehamilan Ke-</th>
                                     <th scope="col">Usia Kehamilan (bulan)</th>
                                     <th scope="col">Golongan Darah</th>
-                                    <th scope="col">Tinggi Badan</th>
-                                    <th scope="col">Berat badan</th>
+                                    <th scope="col">Tinggi Badan (cm)</th>
+                                    <th scope="col">Berat badan (Kg)</th>
                                     <th scope="col">Tanggal Periksa</th>
                                 </tr>
                             </thead>
