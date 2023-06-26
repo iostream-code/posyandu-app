@@ -37,15 +37,15 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-3 col-md-4 label ">Status</div>
-                                    @if ($user->is_admin)
-                                        <div class="col-lg-9 col-md-8">
+                                    <div class="col-lg-9 col-md-8">
+                                        @if ($user->role == 'Super')
+                                            Ketua Kader
+                                        @elseif ($user->role == 'Admin')
                                             Kader
-                                        </div>
-                                    @else
-                                        <div class="col-lg-9 col-md-8">
+                                        @else
                                             Anggota
-                                        </div>
-                                    @endif
+                                        @endif
+                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-3 col-md-4 label ">Email</div>
@@ -103,25 +103,34 @@
                                                 value="{{ $user->name }}">
                                         </div>
                                     </div>
-                                    <div class="row mb-3">
-                                        <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Status</label>
-                                        <div class="col-md-8 col-lg-9">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="is_admin"
-                                                    id="anggota" value="0">
-                                                <label class="form-check-label" for="anggota">
-                                                    Anggota
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="is_admin"
-                                                    id="kader" value="1">
-                                                <label class="form-check-label" for="kader">
-                                                    Kader
-                                                </label>
+                                    @if (Auth::user()->role == 'Super')
+                                        <div class="row mb-3">
+                                            <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Status</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="role"
+                                                        id="anggota" value="Anggota">
+                                                    <label class="form-check-label" for="anggota">
+                                                        Anggota
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="role"
+                                                        id="kader" value="Admin">
+                                                    <label class="form-check-label" for="kader">
+                                                        Kader
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="role"
+                                                        id="ketua" value="Super">
+                                                    <label class="form-check-label" for="ketua">
+                                                        Ketua Kader
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    @endif
                                     <div class="row mb-3">
                                         <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
                                         <div class="col-md-8 col-lg-9">

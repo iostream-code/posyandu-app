@@ -15,7 +15,31 @@ class WargaSeeder extends Seeder
     {
         $dataWarga = [
             [
+                'user_id' => '1',
+                'NIK' => '121212121212',
+                'tanggal_lahir' => '1979-09-25',
+                'no_telp' => '08080880800',
+                'alamat' => 'Lidah Wetan Gg. 5',
+                'pekerjaan' => 'Ibu Rumah Tangga',
+            ],
+            [
                 'user_id' => '2',
+                'NIK' => '121212121212',
+                'tanggal_lahir' => '1979-09-25',
+                'no_telp' => '08080880800',
+                'alamat' => 'Lidah Wetan Gg. 5',
+                'pekerjaan' => 'Ibu Rumah Tangga',
+            ],
+            [
+                'user_id' => '3',
+                'NIK' => '121212121212',
+                'tanggal_lahir' => '1979-09-25',
+                'no_telp' => '08080880800',
+                'alamat' => 'Lidah Wetan Gg. 5',
+                'pekerjaan' => 'Ibu Rumah Tangga',
+            ],
+            [
+                'user_id' => '4',
                 'NIK' => '357804876758880',
                 'tanggal_lahir' => '1974-09-25',
                 'no_telp' => '087677544142',
@@ -23,7 +47,7 @@ class WargaSeeder extends Seeder
                 'pekerjaan' => 'Ibu Rumah Tangga',
             ],
             [
-                'user_id' => '3',
+                'user_id' => '5',
                 'NIK' => '3578040709090003',
                 'tanggal_lahir' => '1964-07-19',
                 'no_telp' => '087677544142',
@@ -31,7 +55,7 @@ class WargaSeeder extends Seeder
                 'pekerjaan' => 'Ibu Rumah Tangga',
             ],
             [
-                'user_id' => '3',
+                'user_id' => '6',
                 'NIK' => '3578040709090003',
                 'tanggal_lahir' => '1972-09-05',
                 'no_telp' => '087677544142',
@@ -39,7 +63,7 @@ class WargaSeeder extends Seeder
                 'pekerjaan' => 'Ibu Rumah Tangga',
             ],
             [
-                'user_id' => '4',
+                'user_id' => '7',
                 'NIK' => '3578040709090003',
                 'tanggal_lahir' => '1970-12-23',
                 'no_telp' => '087677544142',
@@ -47,7 +71,7 @@ class WargaSeeder extends Seeder
                 'pekerjaan' => 'Ibu Rumah Tangga',
             ],
             [
-                'user_id' => '5',
+                'user_id' => '8',
                 'NIK' => '3578040709090003',
                 'tanggal_lahir' => '1969-02-20',
                 'no_telp' => '087677544142',

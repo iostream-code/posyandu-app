@@ -1,16 +1,14 @@
 @extends('layouts.admin')
 
-@section('page-header', 'Users')
+@section('page-header', 'Admin')
 
 @section('content')
     <section class="section dashboard">
         <div class="row">
             <div class="col-lg-12">
-            </div>
-            <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Daftar User</h5>
+                        <h5 class="card-title">Daftar Admin</h5>
                         <!-- Table with stripped rows -->
                         <table class="table">
                             <thead>
@@ -30,7 +28,7 @@
                                             <th scope="row">{{ $loop->iteration }}</th>
                                             <td>{{ $user->name }}</td>
                                             <td>{{ $user->warga->NIK }}</td>
-                                            <td>{{ $user->warga->tanggal_lahir }}</td>
+                                            <td>{{ date('d-m-Y', strtotime($user->warga->tanggal_lahir)) }}</td>
                                             <td>{{ $user->warga->no_telp }}</td>
                                             <td>
                                                 <button type="button" class="btn btn-primary btn-sm"

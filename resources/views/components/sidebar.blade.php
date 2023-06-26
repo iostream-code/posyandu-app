@@ -7,6 +7,14 @@
                 <span>Dashboard</span>
             </a>
         </li>
+        @if (Auth::user()->role == 'Super')
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{ route('super') }}">
+                    <i class="bi bi-people"></i>
+                    <span>Kelola Admin</span>
+                </a>
+            </li>
+        @endif
         <!-- End Dashboard Nav -->
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">

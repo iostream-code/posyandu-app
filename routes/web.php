@@ -45,6 +45,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 //Admin
 Route::get('/admin', [UserController::class, 'admin'])->name('admin');
+Route::get('/admin/user-admin', [UserController::class, 'super'])->name('super');
 Route::get('/admin/user/{user}', [UserController::class, 'detail'])->name('user_detail');
 Route::get('/admin/user/{user}/delete', [UserController::class, 'delete'])->name('user_delete');
 

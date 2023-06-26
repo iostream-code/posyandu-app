@@ -14,7 +14,7 @@ class IbuHamilController extends Controller
      */
     public function index()
     {
-        if (Auth::user()->is_admin) {
+        if (Auth::user()->role != 'User') {
             $ibu_hamil = IbuHamil::all();
 
             return view('admin.ibu-hamil', compact('ibu_hamil'));
@@ -30,7 +30,7 @@ class IbuHamilController extends Controller
      */
     public function create()
     {
-        $users = User::where('is_admin', false)->get();
+        $users = User::where('role', 'User')->get();
 
         return view('admin.ibu-hamil_create', compact('users'));
     }
@@ -69,7 +69,7 @@ class IbuHamilController extends Controller
      */
     public function edit(IbuHamil $ibuhamil)
     {
-        $users = User::where('is_admin', false)->get();
+        $users = User::where('role', 'User')->get();
 
         return view('admin.ibu_hamil_edit', compact('ibuhamil', 'users'));
     }

@@ -2,7 +2,7 @@
 <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="d-flex align-items-center justify-content-between">
         <a href="#" class="logo d-flex align-items-center">
-            <img src="{{ asset('assets/img/logo.png') }}" alt="">
+            <img src="{{ asset('assets/img/apple-touch-icon.png') }}" alt="">
             <span class="d-none d-lg-block">Admin</span>
         </a>
         <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -20,7 +20,7 @@
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                     <li class="dropdown-header">
                         <h6>Kader Posyandu</h6>
-                        <span>Admin</span>
+                        <span>{{ Auth::user()->role }}</span>
                     </li>
                     <li>
                         <hr class="dropdown-divider">

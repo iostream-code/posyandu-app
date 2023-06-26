@@ -12,9 +12,19 @@ class UserController extends Controller
 {
     public function admin()
     {
-        $users = User::where('is_admin', false)->get();
+        if (Auth::user()->role == 'Super')
+            $users = User::where('role', '!=', 'Super')->get();
+        else
+            $users = User::where('role', 'User')->get();
 
         return view('admin.home', compact('users'));
+    }
+
+    public function super()
+    {
+        $users = User::where('role', '!=', 'User')->get();
+
+        return view('admin.user_admin', compact('users'));
     }
 
     public function detail(User $user)
@@ -64,11 +74,11 @@ class UserController extends Controller
 
     public function updateWarga(User $user, Request $request)
     {
-        if (Auth::user()->is_admin) {
+        if (Auth::user()->role != 'User') {
             $user->update([
                 'name' => $request->name,
                 'email' => $request->email,
-                'is_admin' => $request->is_admin
+                'role' => $request->role
             ]);
         } else {
             $user->update([

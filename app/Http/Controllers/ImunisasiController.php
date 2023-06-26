@@ -16,7 +16,7 @@ class ImunisasiController extends Controller
      */
     public function index()
     {
-        if (Auth::user()->is_admin) {
+        if (Auth::user()->role != 'User') {
             $imunisasi = Imunisasi::all();
 
             return view('admin.imunisasi', compact('imunisasi'));
@@ -32,7 +32,7 @@ class ImunisasiController extends Controller
      */
     public function create()
     {
-        $users = User::where('is_admin', false)->get();
+        $users = User::where('role', 'User')->get();
 
         return view('admin.imunisasi_create', compact('users'));
     }
@@ -68,7 +68,7 @@ class ImunisasiController extends Controller
      */
     public function edit(Imunisasi $imunisasi)
     {
-        $users = User::where('is_admin', false)->get();
+        $users = User::where('role', 'User')->get();
 
         return view('admin.imunisasi_edit', compact('imunisasi', 'users'));
     }

@@ -14,7 +14,7 @@ class TimbanganController extends Controller
      */
     public function index()
     {
-        if (Auth::user()->is_admin) {
+        if (Auth::user()->role != 'User') {
             $timbangan = Timbangan::all();
 
             return view('admin.timbangan', compact('timbangan'));
@@ -30,7 +30,7 @@ class TimbanganController extends Controller
      */
     public function create()
     {
-        $users = User::where('is_admin', false)->get();
+        $users = User::where('role', 'User')->get();
 
         return view('admin.timbangan_create', compact('users'));
     }
@@ -70,7 +70,7 @@ class TimbanganController extends Controller
      */
     public function edit(Timbangan $timbangan)
     {
-        $users = User::where('is_admin', false)->get();
+        $users = User::where('role', 'User')->get();
 
         return view('admin.timbangan_edit', compact('timbangan', 'users'));
     }

@@ -1,6 +1,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 :root {
     scroll-behavior: smooth;
 }
@@ -30,9 +31,11 @@ h6 {
     font-family: "Nunito", sans-serif;
 }
 
+
 /*--------------------------------------------------------------
   # Main
   --------------------------------------------------------------*/
+
 #main {
     margin-top: 60px;
     padding: 20px 30px;
@@ -45,9 +48,11 @@ h6 {
     }
 }
 
+
 /*--------------------------------------------------------------
   # Page Title
   --------------------------------------------------------------*/
+
 .pagetitle {
     margin-bottom: 10px;
 }
@@ -59,9 +64,11 @@ h6 {
     color: #012970;
 }
 
+
 /*--------------------------------------------------------------
   # Back to top button
   --------------------------------------------------------------*/
+
 .back-to-top {
     position: fixed;
     visibility: hidden;
@@ -92,10 +99,14 @@ h6 {
     opacity: 1;
 }
 
+
 /*--------------------------------------------------------------
   # Override some default Bootstrap stylings
   --------------------------------------------------------------*/
+
+
 /* Dropdown menus */
+
 .dropdown-menu {
     border-radius: 4px;
     padding: 10px 0;
@@ -162,17 +173,17 @@ h6 {
     0% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }
-
     0% {
         opacity: 0;
     }
 }
 
+
 /* Light Backgrounds */
+
 .bg-primary-light {
     background-color: #cfe2ff;
     border-color: #cfe2ff;
@@ -208,7 +219,9 @@ h6 {
     border-color: #d3d3d4;
 }
 
+
 /* Card */
+
 .card {
     margin-bottom: 30px;
     border: none;
@@ -246,14 +259,18 @@ h6 {
     background-color: rgba(255, 255, 255, 0.6);
 }
 
+
 /* Alerts */
+
 .alert-heading {
     font-weight: 500;
     font-family: "Poppins", sans-serif;
     font-size: 20px;
 }
 
+
 /* Close Button */
+
 .btn-close {
     background-size: 25%;
 }
@@ -263,7 +280,9 @@ h6 {
     box-shadow: none;
 }
 
+
 /* Accordion */
+
 .accordion-item {
     border: 1px solid #ebeef4;
 }
@@ -295,7 +314,9 @@ h6 {
     font-size: 15px;
 }
 
+
 /* Breadcrumbs */
+
 .breadcrumb {
     font-size: 14px;
     font-family: "Nunito", sans-serif;
@@ -321,7 +342,9 @@ h6 {
     font-weight: 600;
 }
 
+
 /* Bordered Tabs */
+
 .nav-tabs-bordered {
     border-bottom: 2px solid #ebeef4;
 }
@@ -343,9 +366,11 @@ h6 {
     border-bottom: 2px solid #4154f1;
 }
 
+
 /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
+
 .logo {
     line-height: 1;
 }
@@ -405,7 +430,6 @@ h6 {
         visibility: hidden;
         opacity: 0;
     }
-
     .header .search-bar-show {
         top: 60px;
         visibility: visible;
@@ -446,14 +470,16 @@ h6 {
     color: #012970;
 }
 
+
 /*--------------------------------------------------------------
   # Header Nav
   --------------------------------------------------------------*/
+
 .header-nav ul {
     list-style: none;
 }
 
-.header-nav > ul {
+.header-nav>ul {
     margin: 0;
     padding: 0;
 }
@@ -586,9 +612,11 @@ h6 {
     background-color: #f6f9ff;
 }
 
+
 /*--------------------------------------------------------------
   # Sidebar
   --------------------------------------------------------------*/
+
 .sidebar {
     position: fixed;
     top: 60px;
@@ -639,7 +667,6 @@ h6 {
     .toggle-sidebar #footer {
         margin-left: 0;
     }
-
     .toggle-sidebar .sidebar {
         left: -300px;
     }
@@ -747,10 +774,14 @@ h6 {
     background-color: #4154f1;
 }
 
+
 /*--------------------------------------------------------------
   # Dashboard
   --------------------------------------------------------------*/
+
+
 /* Filter dropdown */
+
 .dashboard .filter {
     position: absolute;
     right: 0px;
@@ -788,7 +819,9 @@ h6 {
     padding: 8px 15px;
 }
 
+
 /* Info Cards */
+
 .dashboard .info-card {
     padding-bottom: 10px;
 }
@@ -825,7 +858,9 @@ h6 {
     background: #ffecdf;
 }
 
+
 /* Activity */
+
 .dashboard .activity {
     font-size: 14px;
 }
@@ -872,8 +907,10 @@ h6 {
     padding-bottom: 0;
 }
 
+
 /* News & Updates */
-.dashboard .news .post-item + .post-item {
+
+.dashboard .news .post-item+.post-item {
     margin-top: 15px;
 }
 
@@ -905,7 +942,9 @@ h6 {
     margin-left: 95px;
 }
 
+
 /* Recent Sales */
+
 .dashboard .recent-sales {
     font-size: 14px;
 }
@@ -926,7 +965,9 @@ h6 {
     padding: 10px 0 0 0;
 }
 
+
 /* Top Selling */
+
 .dashboard .top-selling {
     font-size: 14px;
 }
@@ -948,9 +989,11 @@ h6 {
     max-width: 60px;
 }
 
+
 /*--------------------------------------------------------------
   # Icons list page
   --------------------------------------------------------------*/
+
 .iconslist {
     display: grid;
     max-width: 100%;
@@ -984,9 +1027,11 @@ h6 {
     color: #666;
 }
 
+
 /*--------------------------------------------------------------
   # Profie Page
   --------------------------------------------------------------*/
+
 .profile .profile-card img {
     max-width: 120px;
 }
@@ -1038,9 +1083,11 @@ h6 {
     max-width: 120px;
 }
 
+
 /*--------------------------------------------------------------
   # F.A.Q Page
   --------------------------------------------------------------*/
+
 .faq .basic h6 {
     font-size: 18px;
     font-weight: 600;
@@ -1051,9 +1098,11 @@ h6 {
     color: #6980aa;
 }
 
+
 /*--------------------------------------------------------------
   # Contact
   --------------------------------------------------------------*/
+
 .contact .info-box {
     padding: 28px 30px;
 }
@@ -1156,15 +1205,16 @@ h6 {
     0% {
         transform: rotate(0deg);
     }
-
     100% {
         transform: rotate(360deg);
     }
 }
 
+
 /*--------------------------------------------------------------
   # Error 404
   --------------------------------------------------------------*/
+
 .error-404 {
     padding: 30px;
 }
@@ -1200,9 +1250,11 @@ h6 {
     }
 }
 
+
 /*--------------------------------------------------------------
   # Footer
   --------------------------------------------------------------*/
+
 .footer {
     padding: 20px 0;
     font-size: 14px;
@@ -1220,4 +1272,116 @@ h6 {
     text-align: center;
     font-size: 13px;
     color: #012970;
+}
+
+
+/*--------------------------------------------------------------
+  # Profile
+  --------------------------------------------------------------*/
+
+.profile-card-3 {
+    font-family: "Open Sans", Arial, sans-serif;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    height: 368px;
+    border: none;
+}
+
+.profile-card-3 .background-block {
+    float: left;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.profile-card-3 .background-block .background {
+    width: 100%;
+    vertical-align: top;
+    opacity: 0.9;
+    -webkit-filter: blur(0.5px);
+    filter: blur(0.5px);
+    -webkit-transform: scale(1.8);
+    transform: scale(2.8);
+}
+
+.profile-card-3 .card-content {
+    width: 100%;
+    padding: 15px 25px;
+    color: #232323;
+    float: left;
+    background: #efefef;
+    height: 50%;
+    border-radius: 0 0 5px 5px;
+    position: relative;
+    z-index: 9999;
+}
+
+.profile-card-3 .card-content::before {
+    content: "";
+    background: #efefef;
+    width: 120%;
+    height: 100%;
+    left: 11px;
+    bottom: 51px;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(-13deg);
+}
+
+.profile-card-3 .profile {
+    border-radius: 50%;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    max-width: 100px;
+    opacity: 1;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 1);
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+    z-index: 99999;
+}
+
+.profile-card-3 h2 {
+    margin: 0 0 5px;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.profile-card-3 h2 small {
+    display: block;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.profile-card-3 i {
+    display: inline-block;
+    font-size: 16px;
+    color: #232323;
+    text-align: center;
+    border: 1px solid #232323;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.profile-card-3 .icon-block {
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.profile-card-3 .icon-block a {
+    text-decoration: none;
+}
+
+.profile-card-3 i:hover {
+    background-color: #232323;
+    color: #fff;
+    text-decoration: none;
 }
