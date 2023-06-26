@@ -31,6 +31,9 @@ Route::get('/my-portal', function () {
     return view('customer.home');
 })->name('my-portal');
 
+Route::get('/register/lengkapi-data', [UserController::class, 'createWarga'])->name('create_warga');
+Route::post('/register/lengkapi-data', [UserController::class, 'storeWarga'])->name('store_warga');
+
 //Admin
 Route::get('/admin', [UserController::class, 'admin'])->name('admin');
 Route::get('/admin/user/{user}', [UserController::class, 'detail'])->name('user_detail');
@@ -43,6 +46,8 @@ Route::get('/admin/data-imunisasi/{imunisasi}', [ImunisasiController::class, 'sh
 Route::get('/admin/data-imunisasi/{imunisasi}/edit', [ImunisasiController::class, 'edit'])->name('edit_imunisasi');
 Route::patch('/admin/data-imunisasi/{imunisasi}/edit', [ImunisasiController::class, 'update'])->name('update_imunisasi');
 Route::delete('/admin/data-imunisasi/{imunisasi}/delete', [ImunisasiController::class, 'delete'])->name('delete_imunisasi');
+// Route::get('/data-imunisasi/cetak-pdf', [ImunisasiController::class, 'pdfView'])->name('rekap_imunisasi');
+Route::get('/data-imunisasi/cetak-pdf', [ImunisasiController::class, 'pdfExport'])->name('print_imunisasi');
 
 Route::get('/data-timbangan', [TimbanganController::class, 'index'])->name('data_timbangan');
 Route::get('/admin/data-timbangan/create', [TimbanganController::class, 'create'])->name('create_timbangan');
@@ -65,7 +70,5 @@ Route::get('/my-portal/data-imunisasi', [ImunisasiController::class, 'index'])->
 Route::get('/my-portal/data-timbangan', [TimbanganController::class, 'index'])->name('customer_data_timbangan');
 Route::get('/my-portal/data-ibu-hamil', [IbuHamilController::class, 'index'])->name('customer_data_ibu_hamil');
 Route::get('/my-portal/profile-saya', [UserController::class, 'showWarga'])->name('profile_warga');
-Route::get('/my-portal/lengkapi-data', [UserController::class, 'createWarga'])->name('create_warga');
-Route::post('/my-portal/lengkapi-data', [UserController::class, 'storeWarga'])->name('store_warga');
 Route::get('/my-portal/{user}', [UserController::class, 'editWarga'])->name('edit_warga');
 Route::patch('/my-portal/{user}', [UserController::class, 'updateWarga'])->name('update_warga');

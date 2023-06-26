@@ -10,6 +10,8 @@
                     <div class="card-body">
                         <div class="d-flex flex-row justify-content-between align-items-center">
                             <h5 class="card-title">Data Imunisasi User</h5>
+                            <button type="button" class="btn btn-primary btn-sm"
+                                onclick="window.location='{{ route('print_imunisasi') }}'">Cetak Data</button>
                             <button type="button" class="btn btn-success btn-sm"
                                 onclick="window.location='{{ route('create_imunisasi') }}'">Tambah Data</button>
                         </div>

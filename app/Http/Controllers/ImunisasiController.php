@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Barryvdh\DomPDF\PDF;
 use App\Models\Imunisasi;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -96,5 +97,32 @@ class ImunisasiController extends Controller
         $imunisasi->delete();
 
         return redirect()->route('data_imunisasi');
+    }
+
+    public function pdfView()
+    {
+        $imunisasi = Imunisasi::all()->first()->get();
+
+        return view('admin.imunisasi_pdf', compact('imunisasi'));
+    }
+
+    public function pdfExport()
+    {
+        $imunisasi = Imunisasi::all()->first();
+
+        $data = [
+            'nama' => $imunisasi->nama,
+            'tanggal_lahir' => $imunisasi->tanggal_lahir,
+            'jenis_imunisasi' => $imunisasi->jenis_imunisasi,
+            'tanggal_imunisasi' => $imunisasi->tanggal_imunisasi,
+        ];
+
+        view()->share('imunisasi', $data);
+        $pdf = PDF::loadview('imunisasi_pdf', $data);
+
+        $pdf->stream();
+
+        // $pdf = PDF::loadview('imunisasi_pdf', $data);
+        // return $pdf->download('rekap-imunisasi.pdf');
     }
 }

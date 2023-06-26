@@ -61,7 +61,7 @@
                                         id="password-confirm" required autocomplete="new-password">
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100" type="submit">Buat Akun</button>
+                                    <button class="btn btn-primary w-100" type="submit">Lanjutkan</button>
                                 </div>
                                 <div class="col-12">
                                     <p class="small mb-0">Sudah punya akun? <a href="{{ route('login') }}">Masuk disini!</a>
