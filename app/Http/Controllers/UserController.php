@@ -27,18 +27,16 @@ class UserController extends Controller
         $user->delete();
         return redirect()->route('admin');
     }
-    
+
     public function createWarga()
     {
-        if (Auth::user()->is_admin == false)
-            return view('customer.warga_create');
-        return redirect()->back();
+        return view('auth.warga_create');
     }
 
     public function storeWarga(Request $request)
     {
         $warga = new Warga([
-            'user_id' => Auth::id(),
+            'user_id' => $request->user_id,
             'NIK' => $request->NIK,
             'tanggal_lahir' => $request->tanggal_lahir,
             'no_telp' => $request->no_telp,
@@ -47,7 +45,7 @@ class UserController extends Controller
         ]);
         $warga->save();
 
-        return redirect()->route('my-portal');
+        return redirect()->route('login');
     }
 
     public function showWarga()

@@ -19,7 +19,7 @@
                                 <h5 class="card-title text-center pb-0 fs-4">Buat Akun</h5>
                                 <p class="text-center small">Masukkan data untuk membuat sebuah akun</p>
                             </div>
-                            <form class="row g-3 needs-validation" action="{{ route('register') }}" method="post">
+                            <form class="row g-3 needs-validation" action="{{ route('store') }}" method="post">
                                 @csrf
                                 <div class="col-12">
                                     <label for="name" class="form-label">Nama Lengkap</label>
@@ -54,11 +54,6 @@
                                         </span>
                                     @enderror
                                     {{-- <div class="invalid-feedback">Please enter your password!</div> --}}
-                                </div>
-                                <div class="col-12">
-                                    <label for="password-confirm" class="form-label">Masukkan Ulang Password</label>
-                                    <input type="password" name="password_confirmation" class="form-control"
-                                        id="password-confirm" required autocomplete="new-password">
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100" type="submit">Lanjutkan</button>

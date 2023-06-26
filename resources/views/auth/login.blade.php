@@ -19,7 +19,7 @@
                                 <h5 class="card-title text-center pb-0 fs-4">Masuk ke Akun Anda</h5>
                                 <p class="text-center small">Masukkan email dan password Anda!</p>
                             </div>
-                            <form class="row g-3 needs-validation" action="{{ route('login') }}" method="post">
+                            <form class="row g-3 needs-validation" action="{{ route('auth') }}" method="post">
                                 @csrf
                                 <div class="col-12">
                                     <label for="email" class="form-label">Email</label>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\IbuHamilController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -19,20 +20,28 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Auth::routes();
+// Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/my-portal', function () {
     return view('customer.home');
 })->name('my-portal');
 
+
+//Auth Route
+Route::get('/register', [AuthController::class, 'create'])->name('register');
+Route::post('/register/store', [AuthController::class, 'store'])->name('store');
 Route::get('/register/lengkapi-data', [UserController::class, 'createWarga'])->name('create_warga');
 Route::post('/register/lengkapi-data', [UserController::class, 'storeWarga'])->name('store_warga');
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/login/cek-data', [AuthController::class, 'auth'])->name('auth');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 //Admin
 Route::get('/admin', [UserController::class, 'admin'])->name('admin');
