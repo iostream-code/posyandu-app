@@ -8,6 +8,7 @@ use App\Models\Warga;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Route;
 
 class UserController extends Controller
 {
@@ -20,7 +21,9 @@ class UserController extends Controller
 
     public function super()
     {
-        $users = User::where('role', '!=', 'Super')->get();
+        $users = User::where('role', '!=', 'Super')
+            ->where('role', '!=', 'User')
+            ->get();
 
         return view('admin.user_admin', compact('users'));
     }
@@ -43,17 +46,18 @@ class UserController extends Controller
             $user->save();
 
             return redirect()->route('super');
-        } else {
-            $warga = new Warga([
-                'user_id' => $request->user_id,
-                'NIK' => $request->NIK,
-                'tanggal_lahir' => $request->tanggal_lahir,
-                'no_telp' => $request->no_telp,
-                'alamat' => $request->alamat,
-                'pekerjaan' => $request->pekerjaan
-            ]);
-            $warga->save();
         }
+        // else {
+        //     $warga = new Warga([
+        //         'user_id' => $request->user_id,
+        //         'NIK' => $request->NIK,
+        //         'tanggal_lahir' => $request->tanggal_lahir,
+        //         'no_telp' => $request->no_telp,
+        //         'alamat' => $request->alamat,
+        //         'pekerjaan' => $request->pekerjaan
+        //     ]);
+        //     $warga->save();
+        // }
         return redirect()->route('super');
     }
 
@@ -65,6 +69,9 @@ class UserController extends Controller
     public function delete(User $user)
     {
         $user->delete();
+
+        if (Route::has('super'))
+            return redirect()->route('super');
         return redirect()->route('admin');
     }
 
@@ -117,13 +124,27 @@ class UserController extends Controller
             ]);
         }
 
-        $user->warga->update([
-            'NIK' => $request->NIK,
-            'tanggal_lahir' => $request->tanggal_lahir,
-            'no_telp' => $request->no_telp,
-            'alamat' => $request->alamat,
-            'pekerjaan' => $request->pekerjaan
-        ]);
+        if (isset($user->warga)) {
+            $user->warga->update([
+                'NIK' => $request->NIK,
+                'tanggal_lahir' => $request->tanggal_lahir,
+                'no_telp' => $request->no_telp,
+                'alamat' => $request->alamat,
+                'pekerjaan' => $request->pekerjaan
+            ]);
+        } else {
+            $warga = new Warga([
+                'user_id' => $user->id,
+                'NIK' => $request->NIK,
+                'tanggal_lahir' => $request->tanggal_lahir,
+                'no_telp' => $request->no_telp,
+                'alamat' => $request->alamat,
+                'pekerjaan' => $request->pekerjaan
+            ]);
+            $warga->save();
+
+            return redirect()->route('super');
+        }
 
         return redirect()->route('profile_warga');
     }
