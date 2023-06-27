@@ -10,7 +10,7 @@
                     <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
                         <img src="{{ asset('assets/img/profile-img.png') }}" alt="Profile" class="rounded-circle">
                         <h3>{{ $user->name }}</h3>
-                        <h6>{{ $user->warga->pekerjaan }}</h6>
+                        <h6>{{ $user->warga->pekerjaan ?? 'Not fill yet' }}</h6>
                     </div>
                 </div>
             </div>
@@ -53,24 +53,24 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-3 col-md-4 label">NIK</div>
-                                    <div class="col-lg-9 col-md-8">{{ $user->warga->NIK }}</div>
+                                    <div class="col-lg-9 col-md-8">{{ $user->warga->NIK ?? '-' }}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-3 col-md-4 label">Tanggal Lahir</div>
                                     <div class="col-lg-9 col-md-8">
-                                        {{ date('d-m-Y', strtotime($user->warga->tanggal_lahir)) }}</div>
+                                        {{ date('d-m-Y', strtotime($user->warga->tanggal_lahir ?? '-')) }}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-3 col-md-4 label">Alamat</div>
-                                    <div class="col-lg-9 col-md-8">{{ $user->warga->alamat }}</div>
+                                    <div class="col-lg-9 col-md-8">{{ $user->warga->alamat ?? '-'}}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-3 col-md-4 label">Pekerjaan</div>
-                                    <div class="col-lg-9 col-md-8">{{ $user->warga->pekerjaan }}</div>
+                                    <div class="col-lg-9 col-md-8">{{ $user->warga->pekerjaan ?? '-' }}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-3 col-md-4 label">No. Telepon</div>
-                                    <div class="col-lg-9 col-md-8">{{ $user->warga->no_telp }}</div>
+                                    <div class="col-lg-9 col-md-8">{{ $user->warga->no_telp ?? '-' }}</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-3 col-md-4 label">Email</div>
@@ -142,7 +142,7 @@
                                         <label for="Nik" class="col-md-4 col-lg-3 col-form-label">NIK</label>
                                         <div class="col-md-8 col-lg-9">
                                             <input name="NIK" type="text" class="form-control" id="Nik"
-                                                value="{{ $user->warga->NIK }}">
+                                                value="{{ $user->warga->NIK ?? '-' }}">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
@@ -150,21 +150,21 @@
                                             Lahir</label>
                                         <div class="col-md-8 col-lg-9">
                                             <input name="tanggal_lahir" type="date" class="form-control"
-                                                id="birth" value="{{ $user->warga->tanggal_lahir }}">
+                                                id="birth" value="{{ $user->warga->tanggal_lahir ?? '-' }}">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <label for="Address" class="col-md-4 col-lg-3 col-form-label">Alamat</label>
                                         <div class="col-md-8 col-lg-9">
                                             <input name="alamat" type="text" class="form-control" id="Address"
-                                                value="{{ $user->warga->alamat }}">
+                                                value="{{ $user->warga->alamat ?? '-' }}">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <label for="Address" class="col-md-4 col-lg-3 col-form-label">Pekerjaan</label>
                                         <div class="col-md-8 col-lg-9">
                                             <input name="pekerjaan" type="text" class="form-control" id="Address"
-                                                value="{{ $user->warga->pekerjaan }}">
+                                                value="{{ $user->warga->pekerjaan ?? '-'}}">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
@@ -172,7 +172,7 @@
                                             Telepon</label>
                                         <div class="col-md-8 col-lg-9">
                                             <input name="no_telp" type="text" class="form-control" id="Phone"
-                                                value="{{ $user->warga->no_telp }}">
+                                                value="{{ $user->warga->no_telp ?? '-'}}">
                                         </div>
                                     </div>
                                     <div class="text-center">
