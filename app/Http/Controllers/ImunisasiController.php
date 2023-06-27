@@ -7,7 +7,7 @@ use App\Models\Imunisasi;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Barryvdh\DomPDF\Facade\PDF;
+use Dompdf\Dompdf;
 
 
 class ImunisasiController extends Controller
@@ -111,8 +111,10 @@ class ImunisasiController extends Controller
     {
         $imunisasi = Imunisasi::all();
 
-        $pdf = PDF::loadView('admin.imunisasi_pdf', ['imunisasi' => $imunisasi]);
-
-        return $pdf->download('data-imunisasi.pdf');
+        $pdf = new Dompdf();
+        $pdf->loadHtml(view('admin.imunisasi_pdf', compact('imunisasi')));
+        $pdf->setPaper('a4', 'potrait');
+        $pdf->render();
+        return $pdf->stream('data-imunisasi.pdf');
     }
 }

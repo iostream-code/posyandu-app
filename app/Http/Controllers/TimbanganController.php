@@ -6,7 +6,7 @@ use App\Models\User;
 use App\Models\Timbangan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Barryvdh\DomPDF\Facade\PDF as PDF;
+use Dompdf\Dompdf;
 
 class TimbanganController extends Controller
 {
@@ -117,8 +117,11 @@ class TimbanganController extends Controller
     {
         $timbangan = Timbangan::all();
 
-        $pdf = PDF::loadView('admin.timbangan_pdf', ['timbangan' => $timbangan]);
+        $pdf = new Dompdf();
+        $pdf->loadHtml(view('admin.timbangan_pdf', compact('timbangan')));
+        $pdf->setPaper('a4', 'potrait');
+        $pdf->render();
 
-        return $pdf->download('data-timbangan.pdf');
+        return $pdf->stream('data-timbangan.pdf');
     }
 }

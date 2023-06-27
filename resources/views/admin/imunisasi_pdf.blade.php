@@ -12,12 +12,12 @@
         <div class="row">
             <div class="col-lg-12" style="margin-top: 15px ">
                 <div class="pull-left">
-                    <h2>Cetak Data Imunisasi</h2>
+                    <h2>Data Imunisasi</h2>
                 </div>
-                <div class="pull-right">
+                {{-- <div class="pull-right">
                     <a class="btn btn-primary" href="{{ route('cetak_imunisasi') }}">Download
                         PDF</a>
-                </div>
+                </div> --}}
             </div>
         </div><br>
         <table class="table">
