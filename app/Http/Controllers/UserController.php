@@ -2,29 +2,58 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-
 use App\Models\User;
 use App\Models\Warga;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
     public function admin()
     {
-        if (Auth::user()->role == 'Super')
-            $users = User::where('role', '!=', 'Super')->get();
-        else
-            $users = User::where('role', 'User')->get();
+        $users = User::where('role', 'User')->get();
 
         return view('admin.home', compact('users'));
     }
 
     public function super()
     {
-        $users = User::where('role', '!=', 'User')->get();
+        $users = User::where('role', '!=', 'Super')->get();
 
         return view('admin.user_admin', compact('users'));
+    }
+
+    public function createAdmin()
+    {
+        return view('admin.user_admin_create');
+    }
+
+    public function storeAdmin(Request $request)
+    {
+        $user = User::where('email', $request->email)->first();
+        if ($user == '') {
+            $user = new User([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+            ]);
+            $user->save();
+
+            return redirect()->route('create_admin');
+        } else {
+            $warga = new Warga([
+                'user_id' => $request->user_id,
+                'NIK' => $request->NIK,
+                'tanggal_lahir' => $request->tanggal_lahir,
+                'no_telp' => $request->no_telp,
+                'alamat' => $request->alamat,
+                'pekerjaan' => $request->pekerjaan
+            ]);
+            $warga->save();
+        }
+        return redirect()->route('super');
     }
 
     public function detail(User $user)

@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\IbuHamil;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Barryvdh\DomPDF\Facade\PDF as PDF;
 
 class IbuHamilController extends Controller
 {
@@ -101,5 +102,21 @@ class IbuHamilController extends Controller
         $ibuhamil->delete();
 
         return redirect()->route('data_ibu_hamil');
+    }
+
+    public function pdfView()
+    {
+        $ibuHamil = IbuHamil::all();
+
+        return view('admin.ibu-hamil_pdf', compact('ibuHamil'));
+    }
+
+    public function pdfExport(Request $request)
+    {
+        $ibuHamil = IbuHamil::all();
+
+        $pdf = PDF::loadView('admin.ibu-hamil_pdf', ['ibuHamil' => $ibuHamil]);
+
+        return $pdf->download('data-ibu-hamil.pdf');
     }
 }

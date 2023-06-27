@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Cetak - Data Imunisasi Anggota</title>
+    <title>Cetak - Data Ibu Hamil Anggota</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
@@ -12,10 +12,10 @@
         <div class="row">
             <div class="col-lg-12" style="margin-top: 15px ">
                 <div class="pull-left">
-                    <h2>Cetak Data Imunisasi</h2>
+                    <h2>Cetak Data Ibu Hamil</h2>
                 </div>
                 <div class="pull-right">
-                    <a class="btn btn-primary" href="{{ route('cetak_imunisasi') }}">Download
+                    <a class="btn btn-primary" href="{{ route('cetak_ibu_hamil') }}">Download
                         PDF</a>
                 </div>
             </div>
@@ -31,13 +31,16 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($imunisasi as $data)
+                @foreach ($ibuHamil as $data)
                     <tr>
                         <th scope="row">{{ $loop->iteration }}</th>
                         <td>{{ $data->nama }}</td>
-                        <td>{{ date('d-m-Y', strtotime($data->tanggal_lahir)) }}</td>
-                        <td>{{ $data->jenis_imunisasi }}</td>
-                        <td>{{ date('d-m-Y', strtotime($data->tanggal_imunisasi)) }}</td>
+                        <td>{{ $data->kehamilan_ke }}</td>
+                        <td>{{ $data->umur_kehamilan }}</td>
+                        <td>{{ $data->golongan_darah }}</td>
+                        <td>{{ $data->tinggi_badan }}</td>
+                        <td>{{ $data->berat_badan }}</td>
+                        <td>{{ $data->tanggal_periksa }}</td>
                     </tr>
                 @endforeach
             </tbody>

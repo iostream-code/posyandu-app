@@ -8,7 +8,11 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Daftar Admin</h5>
+                        <div class="d-flex flex-row justify-content-between align-items-center">
+                            <h5 class="card-title">Daftar Admin</h5>
+                            <button class="btn btn-success btn-sm" onclick="window.location='{{ route('create_admin') }}'"
+                                type="button">Create</button>
+                        </div>
                         <!-- Table with stripped rows -->
                         <table class="table">
                             <thead>
@@ -23,13 +27,12 @@
                             </thead>
                             <tbody>
                                 @foreach ($users as $user)
-                                    @isset($user->warga)
                                         <tr>
                                             <th scope="row">{{ $loop->iteration }}</th>
                                             <td>{{ $user->name }}</td>
-                                            <td>{{ $user->warga->NIK }}</td>
-                                            <td>{{ date('d-m-Y', strtotime($user->warga->tanggal_lahir)) }}</td>
-                                            <td>{{ $user->warga->no_telp }}</td>
+                                            <td>{{ $user->warga->NIK ?? 'Note set yet' }}</td>
+                                            <td>{{ date('d-m-Y', strtotime($user->warga->tanggal_lahir ?? '')) }}</td>
+                                            <td>{{ $user->warga->no_telp ?? 'Not set yet' }}</td>
                                             <td>
                                                 <button type="button" class="btn btn-primary btn-sm"
                                                     onclick="window.location='{{ route('user_detail', $user) }}'"><i
@@ -39,7 +42,6 @@
                                                         class="bi bi-trash"></i></button>
                                             </td>
                                         </tr>
-                                    @endisset
                                 @endforeach
                             </tbody>
                         </table>
