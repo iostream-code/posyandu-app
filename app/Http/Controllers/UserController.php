@@ -42,7 +42,7 @@ class UserController extends Controller
             ]);
             $user->save();
 
-            return redirect()->route('create_admin');
+            return redirect()->route('super');
         } else {
             $warga = new Warga([
                 'user_id' => $request->user_id,
