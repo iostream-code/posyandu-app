@@ -26,36 +26,18 @@
                                     <div class="input-group has-validation">
                                         <span class="input-group-text" id="inputGroupPrepend">@</span>
                                         <input type="email" name="email" class="form-control" id="email" required>
-                                        @error('email')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                        {{-- <div class="invalid-feedback">Please enter your Email.</div> --}}
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <label for="password" class="form-label">Password</label>
                                     <input type="password" name="password" class="form-control" id="password" required>
-                                    @error('password')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                    {{-- <div class="invalid-feedback">Please enter your password!</div> --}}
                                 </div>
-                                {{-- <div class="col-12">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="remember" value="true"
-                                            id="rememberMe">
-                                        <label class="form-check-label" for="rememberMe">Remember me</label>
-                                    </div>
-                                </div> --}}
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100" type="submit">Masuk</button>
                                 </div>
                                 <div class="col-12">
-                                    <p class="small mb-0">Belum punya akun? <a href="{{ route('register') }}">Buat disini</a></p>
+                                    <p class="small mb-0">Belum punya akun? <a href="{{ route('register') }}">Buat
+                                            disini</a></p>
                                 </div>
                             </form>
                         </div>

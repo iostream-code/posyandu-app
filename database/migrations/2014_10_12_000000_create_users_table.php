@@ -17,6 +17,11 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->enum('role', ['Super', 'Admin', 'User'])->default('User');
+            $table->string('NIK');
+            $table->date('tanggal_lahir');
+            $table->string('no_telp');
+            $table->string('alamat');
+            $table->string('pekerjaan');
             $table->timestamps();
         });
     }

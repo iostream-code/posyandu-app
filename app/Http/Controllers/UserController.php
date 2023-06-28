@@ -52,7 +52,7 @@ class UserController extends Controller
 
     public function detail(User $user)
     {
-        return view('admin.user_detail', compact('user'));
+        return view('admin.user_admin_detail', compact('user'));
     }
 
     public function delete(User $user)

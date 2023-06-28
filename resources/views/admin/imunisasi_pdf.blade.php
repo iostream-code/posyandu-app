@@ -11,16 +11,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12" style="margin-top: 15px ">
-                <div class="pull-left">
-                    <h2>Data Imunisasi</h2>
-                </div>
-                {{-- <div class="pull-right">
-                    <a class="btn btn-primary" href="{{ route('cetak_imunisasi') }}">Download
-                        PDF</a>
-                </div> --}}
+                <h2>Data Imunisasi</h2>
             </div>
         </div><br>
-        <table class="table" id="myTable">
+        <table class="table">
             <thead>
                 <tr>
                     <th scope="col">#</th>

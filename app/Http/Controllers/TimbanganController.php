@@ -106,14 +106,7 @@ class TimbanganController extends Controller
         return redirect()->route('data_timbangan');
     }
 
-    public function pdfView()
-    {
-        $timbangan = Timbangan::all();
-
-        return view('admin.timbangan_pdf', compact('timbangan'));
-    }
-
-    public function pdfExport(Request $request)
+    public function pdfExport()
     {
         $timbangan = Timbangan::all();
 

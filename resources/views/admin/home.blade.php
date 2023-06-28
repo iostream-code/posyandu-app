@@ -25,13 +25,12 @@
                             </thead>
                             <tbody>
                                 @foreach ($users as $user)
-                                    @isset($user->warga)
                                         <tr>
                                             <th scope="row">{{ $loop->iteration }}</th>
                                             <td>{{ $user->name }}</td>
-                                            <td>{{ $user->warga->NIK }}</td>
-                                            <td>{{ $user->warga->tanggal_lahir }}</td>
-                                            <td>{{ $user->warga->no_telp }}</td>
+                                            <td>{{ $user->NIK }}</td>
+                                            <td>{{ $user->tanggal_lahir }}</td>
+                                            <td>{{ $user->no_telp }}</td>
                                             <td>
                                                 <button type="button" class="btn btn-primary btn-sm"
                                                     onclick="window.location='{{ route('user_detail', $user) }}'"><i
@@ -41,7 +40,6 @@
                                                         class="bi bi-trash"></i></button>
                                             </td>
                                         </tr>
-                                    @endisset
                                 @endforeach
                             </tbody>
                         </table>

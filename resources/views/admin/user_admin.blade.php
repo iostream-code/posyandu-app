@@ -30,9 +30,9 @@
                                         <tr>
                                             <th scope="row">{{ $loop->iteration }}</th>
                                             <td>{{ $user->name }}</td>
-                                            <td>{{ $user->warga->NIK ?? 'Note set yet' }}</td>
-                                            <td>{{ date('d-m-Y', strtotime($user->warga->tanggal_lahir ?? '')) }}</td>
-                                            <td>{{ $user->warga->no_telp ?? 'Not set yet' }}</td>
+                                            <td>{{ $user->NIK ?? 'Note set yet' }}</td>
+                                            <td>{{ date('d-m-Y', strtotime($user->tanggal_lahir ?? '')) }}</td>
+                                            <td>{{ $user->no_telp ?? 'Not set yet' }}</td>
                                             <td>
                                                 <button type="button" class="btn btn-primary btn-sm"
                                                     onclick="window.location='{{ route('user_detail', $user) }}'"><i

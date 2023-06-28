@@ -11,13 +11,13 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12" style="margin-top: 15px ">
-                <div class="pull-left">
-                    <h2>Cetak Data Ibu Hamil</h2>
+                <h2>Cetak Data Ibu Hamil</h2>
+                {{-- <div class="pull-left">
                 </div>
                 <div class="pull-right">
                     <a class="btn btn-primary" href="{{ route('cetak_ibu_hamil') }}">Download
                         PDF</a>
-                </div>
+                </div> --}}
             </div>
         </div><br>
         <table class="table">

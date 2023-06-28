@@ -104,14 +104,7 @@ class IbuHamilController extends Controller
         return redirect()->route('data_ibu_hamil');
     }
 
-    public function pdfView()
-    {
-        $ibuHamil = IbuHamil::all();
-
-        return view('admin.ibu-hamil_pdf', compact('ibuHamil'));
-    }
-
-    public function pdfExport(Request $request)
+    public function pdfExport()
     {
         $ibuHamil = IbuHamil::all();
 

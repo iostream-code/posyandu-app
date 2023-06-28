@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AuthController extends Controller
 {
@@ -22,7 +23,11 @@ class AuthController extends Controller
         ];
 
         if (Auth::attempt($data))
-            return redirect()->route('home');
+            return redirect('home')->with('Selamat Datang ' . Auth::user()->name, 'Login berhasil!');
+
+        Alert::error('Login gagal!', 'Silahkan periksa kembali email dan password Anda');
+
+        return redirect()->back();
     }
 
     public function create()
@@ -38,7 +43,9 @@ class AuthController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return view('auth.warga_create', compact('user'));
+        Alert::success('Berhasil mendaftar!', 'Lanjutkan untuk melengkapi data diri');
+
+        return view('auth.register_warga', compact('user'));
     }
 
     public function logout()
