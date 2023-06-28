@@ -20,7 +20,6 @@
                             </div>
                         </div>
                         <!-- Table with stripped rows -->
-                        <div class="table-responsive">
                         <table class="table" id="myTable">
                             <thead>
                                 <tr>
