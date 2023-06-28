@@ -20,7 +20,7 @@
                 </div> --}}
             </div>
         </div><br>
-        <table class="table">
+        <table class="table" id="myTable">
             <thead>
                 <tr>
                     <th scope="col">#</th>

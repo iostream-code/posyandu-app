@@ -101,15 +101,15 @@
             <div class="row justify-content-between">
                 <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
                     <div data-aos="zoom-out">
-                        <h1>Selamat Datang di <span>Sistem Informasi Posyandu</span></h1>
-                        <h2>Semua yang Anda butuhkan kini dapat diakses dalam sebuah website</h2>
+                        <h1>Selamat Datang di <span>Sistem Informasi Posyandu Desa Ngariboyo</span></h1>
+                        <h2>Semua yang anda butuhkan kini dapat diakses dalam sebuah website</h2>
                         <div class="text-center text-lg-start">
-                            <a href="#about" class="btn-get-started scrollto">Labih Lanjut</a>
+                            <a href="#about" class="btn-get-started scrollto">Lebih Lanjut</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
-                    <img src="assets/img/hero-img-2.png" class="img-fluid animated" alt="">
+                    <img src="assets/img/logo-desa.png" class="img-fluid animated" alt="" style="width: 200px; height: 200px">
                 </div>
             </div>
         </div>
@@ -183,18 +183,78 @@
             <div class="container-fluid">
 
                 <div class="row">
-                    <div class="col-xl-10 col-lg-8 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5"
+                    <div class="col-lg-12 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5"
                         data-aos="fade-left">
                         <div class="section-title" data-aos="fade-up">
                             <h2>Layanan</h2>
                             <p>Kami Melayani</p>
                         </div>
 
-                        <p class="text_layanan">Jadwal kegiatan posyandu Dahlia 1 dilakukan secara rutin tanggal 21 setiap bulannya, yang berlokasi di rumah Ibu Laili Mukharomah RT 3 RW 1 Dusun Jetis, Desa Ngariboyo.
+                        <p class="justify-content-center">Jadwal kegiatan posyandu Dahlia 1 dilakukan secara rutin tanggal 21 setiap bulannya, yang berlokasi di rumah Ibu Laili Mukharomah RT 3 RW 1 Dusun Jetis, Desa Ngariboyo.
                             Adapun program layanan yang dilakukan oleh Posyandu Dahlia 1 diantaranya :
                         </p>
 
-                        <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="row">
+                        <div class="col-xl-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card">
+                            <div class="card-body">
+                            <h5 class="card-title">
+                            <h4 style="color: #1acc8d;">Timbangan</h4></h5>
+                            <p class="card-text" style="text-align: justify;">Posyandu Dahlia 1 melayani program timbangan, dimana bayi dan balita
+                                akan di timbang berat badan dan diukur tinggi badannya untuk mengetahui
+                                perkembangan bayi dan balita yang ada di Dusun Jetis Desa Ngariboyo setiap bulannya.</p>
+                            <!-- <div class="icon-box">
+                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                            <h4><a href="">Timbangan</a></h4>
+                            <p>Posyandu Dahlia 1 melayani program timbangan, dimana bayi dan balita
+                                akan di timbang berat badan dan diukur tinggi badannya untuk mengetahui
+                                perkembangan bayi dan balita yang ada di Dusun Jetis Desa Ngariboyo setiap bulannya.</p>
+                            </div> -->
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card">
+                            <div class="card-body">
+                            <h5 class="card-title">
+                            <h4 style="color: #1acc8d;">Imunisasi</h4></h5>
+                            <p class="card-text" style="text-align: justify;">Posyandu Dahlia 1 juga melayani program imunisasi bagi bayi dan
+                                balita, dimana imunisasi akan dilakukan secara bertahap sesuai dengan umur dan jenis
+                                vaksin agar kesehatan
+                                terjaga dan terhindar dari penyakit.</p>
+                            <!-- <div class="icon-box">
+                            <div class="icon"><i class="bx bx-file"></i></div>
+                            <h4><a href="">Imunisasi</a></h4>
+                            <p>Posyandu Dahlia 1 juga melayani program imunisasi bagi bayi dan
+                                balita, dimana imunisasi akan dilakukan secara bertahap sesuai dengan umur dan jenis
+                                vaksin agar kesehatan
+                                terjaga dan terhindar dari penyakit.</p>
+                            </div> -->
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="card">
+                            <div class="card-body">
+                            <h5 class="card-title">
+                            <h4 style="color: #1acc8d;">Cek Ibu Hamil</h4></h5>
+                            <p class="card-text" style="text-align: justify;">Posyandu Dahlia 1 juga melayani cek kesehatan ibu hamil untuk
+                                mengetahui perkembangan janin dan kesehatan ibu agar terhindar dari
+                                resiko yang tidak diinginkan.</p>
+                            <!-- <div class="icon-box">
+                            <div class="icon"><i class="bx bx-tachometer"></i></div>
+                            <h4><a href="">Cek Ibu Hamil</a></h4>
+                            <p>Posyandu Dahlia 1 juga melayani cek kesehatan ibu hamil untuk
+                                mengetahui perkembangan janin dan kesehatan ibu agar terhindar dari
+                                resiko yang tidak diinginkan.</p>
+                            </div> -->
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
                             <h4 class="title"><a href="">Timbangan</a></h4>
                             <p class="description">Posyandu Dahlia 1 melayani program timbangan, dimana bayi dan balita
                                 akan di timbang berat badan dan diukur tinggi badannya untuk mengetahui
@@ -216,7 +276,7 @@
                             <p class="description">Posyandu Dahlia 1 juga melayani cek kesehatan ibu hamil untuk
                                 mengetahui perkembangan janin dan kesehatan ibu agar terhindar dari
                                 resiko yang tidak diinginkan. </p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -319,7 +379,7 @@
                             <div class="address">
                                 <i class="bi bi-geo-alt"></i>
                                 <h4>Alamat</h4>
-                                <p>Jl. Eang Sigogati, Dsn. Jetis RT 3 RW 1, Ds. Ngariboyo, Kab. Magetan</p>
+                                <p>Jl. Eang Singogati, Dsn. Jetis RT 3 RW 1, Ds. Ngariboyo, Kab. Magetan</p>
                             </div>
                             <div class="email">
                                 <i class="bi bi-envelope"></i>

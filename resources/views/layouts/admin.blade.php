@@ -27,9 +27,13 @@
     <link href="{{ asset('assets/vendor/quill/quill.bubble.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/simple-datatables/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets/css/admin.css') }}" rel="stylesheet">
+    <style>
+        .dt-buttons{display:none}
+    </style>
 </head>
 
 <body>
@@ -50,13 +54,14 @@
         @yield('content')
 
     </main>
-
+    
     @include('components.footer')
-
+    
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
-
+    class="bi bi-arrow-up-short"></i></a>
+    
     <!-- Vendor JS Files -->
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/apexcharts/apexcharts.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/chart.js/chart.umd.js') }}"></script>
@@ -65,9 +70,38 @@
     <script src="{{ asset('assets/vendor/simple-datatables/simple-datatables.js') }}"></script>
     <script src="{{ asset('assets/vendor/tinymce/tinymce.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
+    <script src="{{ asset('assets/vendors/datatables.net/jquery.dataTables.js') }}"></script>
+    <script src="{{ asset('assets/vendors/datatables.net-bs4/jquery.dataTables.js') }}"></script>
+    <script src="{{ asset('assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js') }}"></script>
 
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/js/admin.js') }}"></script>
+    <script src="{{ asset('assets/js/dataexport.js') }}"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.print.min.js"></script>
+
+    <script>
+    $(document).ready(function () {
+        $('#myTable').DataTable({
+        "aLengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All Pages"]],
+        "pageLength": 10,
+        "order": [[0, 'desc']],
+        "language": {
+            "paginate": {
+            "previous": "<",
+            "next": ">"
+            }
+        },
+        "dom": 'Blfrtip',
+        "buttons": ['copy', 'csv', 'excel', 'pdf', 'print']
+        });
+        
+    });
+</script>
 </body>
 
 </html>
