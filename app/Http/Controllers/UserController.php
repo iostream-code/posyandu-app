@@ -47,17 +47,6 @@ class UserController extends Controller
 
             return redirect()->route('super');
         }
-        // else {
-        //     $warga = new Warga([
-        //         'user_id' => $request->user_id,
-        //         'NIK' => $request->NIK,
-        //         'tanggal_lahir' => $request->tanggal_lahir,
-        //         'no_telp' => $request->no_telp,
-        //         'alamat' => $request->alamat,
-        //         'pekerjaan' => $request->pekerjaan
-        //     ]);
-        //     $warga->save();
-        // }
         return redirect()->route('super');
     }
 
