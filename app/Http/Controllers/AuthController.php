@@ -41,11 +41,16 @@ class AuthController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'NIK' => $request->NIK,
+            'tanggal_lahir' => $request->tanggal_lahir,
+            'no_telp' => $request->no_telp,
+            'alamat' => $request->alamat,
+            'pekerjaan' => $request->pekerjaan
         ]);
 
         Alert::success('Berhasil mendaftar!', 'Lanjutkan untuk melengkapi data diri');
 
-        return view('auth.register_warga', compact('user'));
+        return redirect()->route('home');
     }
 
     public function logout()

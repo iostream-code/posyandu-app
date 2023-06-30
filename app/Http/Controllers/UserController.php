@@ -9,12 +9,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
+use Yajra\DataTables\Datatables;
 
 class UserController extends Controller
 {
     public function admin()
     {
-        $users = User::where('role', 'User')->get();
+        $users = User::where('role', 'User')->simplePaginate(5);
 
         return view('admin.home', compact('users'));
     }
@@ -42,6 +43,11 @@ class UserController extends Controller
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
                 'role' => $request->role,
+                'NIK' => $request->NIK,
+                'tanggal_lahir' => $request->tanggal_lahir,
+                'no_telp' => $request->no_telp,
+                'alamat' => $request->alamat,
+                'pekerjaan' => $request->pekerjaan
             ]);
             $user->save();
 

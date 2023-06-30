@@ -25,21 +25,21 @@
                             </thead>
                             <tbody>
                                 @foreach ($users as $user)
-                                        <tr>
-                                            <th scope="row">{{ $loop->iteration }}</th>
-                                            <td>{{ $user->name }}</td>
-                                            <td>{{ $user->NIK }}</td>
-                                            <td>{{ $user->tanggal_lahir }}</td>
-                                            <td>{{ $user->no_telp }}</td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary btn-sm"
-                                                    onclick="window.location='{{ route('user_detail', $user) }}'"><i
-                                                        class="bi bi-search"></i></button>
-                                                <button type="button" class="btn btn-danger btn-sm"
-                                                    onclick="window.location='{{ route('user_delete', $user) }}'"><i
-                                                        class="bi bi-trash"></i></button>
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <th scope="row">{{ $loop->iteration }}</th>
+                                        <td>{{ $user->name }}</td>
+                                        <td>{{ $user->NIK }}</td>
+                                        <td>{{ $user->tanggal_lahir }}</td>
+                                        <td>{{ $user->no_telp }}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary btn-sm"
+                                                onclick="window.location='{{ route('user_detail', $user) }}'"><i
+                                                    class="bi bi-search"></i></button>
+                                            <button type="button" class="btn btn-danger btn-sm"
+                                                onclick="window.location='{{ route('user_delete', $user) }}'"><i
+                                                    class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
                                 @endforeach
                             </tbody>
                         </table>
