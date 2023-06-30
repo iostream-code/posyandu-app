@@ -33,6 +33,7 @@
     <link href="{{ asset('assets/css/admin.css') }}" rel="stylesheet">
     <style>
         .dt-buttons{display:none}
+        .dataTables_length{position: absolute;}
     </style>
 </head>
 

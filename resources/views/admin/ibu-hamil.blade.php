@@ -20,7 +20,8 @@
                             </div>
                         </div>
                         <!-- Table with stripped rows -->
-                        <table class="table=" id="myTable">
+                        <div class="table-responsive">
+                        <table class="table" id="myTable">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
@@ -64,6 +65,7 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        </div>
                         <!-- End Table with stripped rows -->
                     </div>
                 </div>

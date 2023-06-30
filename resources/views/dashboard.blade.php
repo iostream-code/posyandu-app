@@ -10,8 +10,8 @@
     <title>SI - Posyandu</title>
 
     <!-- Favicons -->
-    <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset('assets/img/logo.png') }}" rel="icon">
+    <link href="{{ asset('assets/img/logo.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link
@@ -384,7 +384,7 @@
                             <div class="email">
                                 <i class="bi bi-envelope"></i>
                                 <h4>Email</h4>
-                                <p>infoPosyandu@gmail.com</p>
+                                <p>posyanduDahlia1@gmail.com</p>
                             </div>
                             <div class="phone">
                                 <i class="bi bi-phone"></i>
