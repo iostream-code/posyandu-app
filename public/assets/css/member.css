@@ -800,6 +800,7 @@ section {
 
 .my-portal .icon-box {
     display: flex;
+    padding: 15px;
     align-items: center;
     background: #f5f5ff;
     transition: ease-in-out 0.3s;

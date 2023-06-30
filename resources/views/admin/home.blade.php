@@ -6,8 +6,6 @@
     <section class="section dashboard">
         <div class="row">
             <div class="col-lg-12">
-            </div>
-            <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Daftar User</h5>
@@ -43,6 +41,9 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        <div class="row text-end">
+                            {{ $users->links() }}
+                        </div>
                         <!-- End Table with stripped rows -->
                     </div>
                 </div>

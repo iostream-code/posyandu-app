@@ -14,7 +14,7 @@
             </thead>
             <tbody>
                 @foreach ($imunisasi as $data)
-                    <tr>
+                    <tr class="table-light">
                         <th scope="row">{{ $loop->iteration }}</th>
                         <td>{{ $data->nama }}</td>
                         <td>{{ date('d-m-Y', strtotime($data->tanggal_lahir)) }}</td>

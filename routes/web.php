@@ -82,6 +82,5 @@ Route::get('/admin/data-periksa/data-ibu-hamil/cetak-pdf', [IbuHamilController::
 Route::get('/my-portal/data-imunisasi', [ImunisasiController::class, 'index'])->name('customer_data_imunisasi');
 Route::get('/my-portal/data-timbangan', [TimbanganController::class, 'index'])->name('customer_data_timbangan');
 Route::get('/my-portal/data-ibu-hamil', [IbuHamilController::class, 'index'])->name('customer_data_ibu_hamil');
-Route::get('/my-portal/profile-saya', [UserController::class, 'showWarga'])->name('profile_warga');
-Route::get('/my-portal/{user}', [UserController::class, 'editWarga'])->name('edit_warga');
-Route::patch('/my-portal/{user}', [UserController::class, 'updateWarga'])->name('update_warga');
+Route::get('/my-portal/profile-saya/{user}', [UserController::class, 'detail'])->name('profile_warga');
+Route::patch('/my-portal/profile-saya/{user}', [UserController::class, 'update'])->name('update_warga');

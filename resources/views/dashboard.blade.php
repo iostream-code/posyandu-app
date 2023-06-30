@@ -238,14 +238,6 @@
                                             dan jenis
                                             vaksin agar kesehatan
                                             terjaga dan terhindar dari penyakit.</p>
-                                        <!-- <div class="icon-box">
-                            <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4><a href="">Imunisasi</a></h4>
-                            <p>Posyandu Dahlia 1 juga melayani program imunisasi bagi bayi dan
-                                balita, dimana imunisasi akan dilakukan secara bertahap sesuai dengan umur dan jenis
-                                vaksin agar kesehatan
-                                terjaga dan terhindar dari penyakit.</p>
-                            </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -253,47 +245,16 @@
                             <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
                                 data-aos-delay="300">
                                 <div class="card">
-                                    <div class="card-body">
+                                    <div class="card-faviconbody">
                                         <h5 class="card-title">
                                             <h4 style="color: #01036f;"><strong>Cek Ibu Hamil</strong></h4>
                                             <p class="card-text" style="text-align: justify;">Posyandu Dahlia 1 juga
                                                 melayani cek kesehatan ibu hamil untuk
                                                 mengetahui perkembangan janin dan kesehatan ibu agar terhindar dari
                                                 resiko yang tidak diinginkan.</p>
-                                            <!-- <div class="icon-box">
-                            <div class="icon"><i class="bx bx-tachometer"></i></div>
-                            <h4><a href="">Cek Ibu Hamil</a></h4>
-                            <p>Posyandu Dahlia 1 juga melayani cek kesehatan ibu hamil untuk
-                                mengetahui perkembangan janin dan kesehatan ibu agar terhindar dari
-                                resiko yang tidak diinginkan.</p>
-                            </div> -->
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-                            <h4 class="title"><a href="">Timbangan</a></h4>
-                            <p class="description">Posyandu Dahlia 1 melayani program timbangan, dimana bayi dan balita
-                                akan di timbang berat badan dan diukur tinggi badannya untuk mengetahui
-                                perkembangan bayi dan balita yang ada di Dusun Jetis Desa Ngariboyo setiap bulannya.
-                            </p>
-                        </div>
-
-                        <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
-                            <h4 class="title"><a href="">Imunisasi</a></h4>
-                            <p class="description">Posyandu Dahlia 1 juga melayani program imunisasi bagi bayi dan
-                                balita, dimana imunisasi akan dilakukan secara bertahap sesuai dengan umur dan jenis
-                                vaksin agar kesehatan
-                                terjaga dan terhindar dari penyakit.
-                            </p>
-                        </div>
-
-                        <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
-                            <h4 class="title"><a href="">Cek Ibu Hamil</a></h4>
-                            <p class="description">Posyandu Dahlia 1 juga melayani cek kesehatan ibu hamil untuk
-                                mengetahui perkembangan janin dan kesehatan ibu agar terhindar dari
-                                resiko yang tidak diinginkan. </p>
-                        </div> -->
                         </div>
                     </div>
                 </div>
