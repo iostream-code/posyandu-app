@@ -100,6 +100,13 @@ class ImunisasiController extends Controller
         return redirect()->route('data_imunisasi');
     }
 
+    public function pdfView()
+    {
+        $imunisasi = Imunisasi::all();
+
+        return view('admin.imunisasi_pdf', compact('imunisasi'));
+    }
+
     public function pdfExport()
     {
         $imunisasi = Imunisasi::all();
