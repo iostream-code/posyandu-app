@@ -23,7 +23,7 @@ class UserController extends Controller
 
     public function admin()
     {
-        $users = User::where('role', 'User')->simplePaginate(5);
+        $users = User::where('role', 'User')->get();
 
         return view('admin.home', compact('users'));
     }

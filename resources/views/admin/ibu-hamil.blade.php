@@ -20,7 +20,7 @@
                             </div>
                         </div>
                         <!-- Table with stripped rows -->
-                        <table class="table" id="myTable">
+                        <table class="table datatable">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>

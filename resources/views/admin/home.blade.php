@@ -10,7 +10,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Daftar User</h5>
                         <!-- Table with stripped rows -->
-                        <table class="table">
+                        <table class="table datatable">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
@@ -41,9 +41,6 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        <div class="row text-end">
-                            {{ $users->links() }}
-                        </div>
                         <!-- End Table with stripped rows -->
                     </div>
                 </div>
