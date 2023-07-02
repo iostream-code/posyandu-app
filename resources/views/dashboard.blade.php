@@ -245,7 +245,7 @@
                             <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
                                 data-aos-delay="300">
                                 <div class="card">
-                                    <div class="card-faviconbody">
+                                    <div class="card-body">
                                         <h5 class="card-title">
                                             <h4 style="color: #01036f;"><strong>Cek Ibu Hamil</strong></h4>
                                             <p class="card-text" style="text-align: justify;">Posyandu Dahlia 1 juga
