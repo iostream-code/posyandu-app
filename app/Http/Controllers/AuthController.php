@@ -37,7 +37,30 @@ class AuthController extends Controller
 
     public function store(Request $request)
     {
-        $user = User::create([
+        $request->validate(
+            [
+                'name' => 'required',
+                'email' => 'required',
+                'password' => 'required|min:8',
+                'NIK' => 'required|numeric|min:16',
+                'tanggal_lahir' => 'required',
+                'no_telp' => 'required|numeric',
+                'alamat' => 'required',
+                'pekerjaan' => 'required'
+            ],[
+                'password.min' => 'Password minimal 8 karakter!',
+                'NIK.required' => 'NIK wajib diisi!',
+                'NIK.numeric' => 'NIK harus berupa angka!',
+                'NIK.min' => 'NIK minimal 16 karakter!',
+                'tanggal_lahir.required' => 'Tanggal lahir harus diisi!',
+                'no_telp.required' => 'Nomor telepon wajib diisi!',
+                'no_telp.numeric' => 'Nomor harus berupa angka!',
+                'alamat.required' => 'Alamat harus diisi!',
+                'pekerjaan.required' => 'Pekerjaan harus diisi!',
+            ]
+        );
+
+        $user = new User([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
@@ -48,9 +71,13 @@ class AuthController extends Controller
             'pekerjaan' => $request->pekerjaan
         ]);
 
-        Alert::success('Berhasil mendaftar!', 'Lanjutkan untuk melengkapi data diri');
+        if ($user->save()) {
+            Alert::success('Berhasil mendaftar!', 'Lanjutkan untuk melengkapi data diri');
 
-        return redirect()->route('home');
+            return redirect()->route('home');
+        }
+
+        return redirect()->back();
     }
 
     public function logout()

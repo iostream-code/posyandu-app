@@ -36,22 +36,38 @@ class UserController extends Controller
     public function storeAdmin(Request $request)
     {
         $user = User::where('email', $request->email)->first();
+
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|unique',
+            'password' => 'required|min:8',
+            'role' => 'required',
+            'NIK' => 'required|numeric|min:16',
+            'tanggal_lahir' => 'required',
+            'no_telp' => 'required|numeric|min:9',
+            'alamat' => 'required',
+            'pekerjaan' => 'required'
+        ]);
+
+        $data = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'role' => $request->role,
+            'NIK' => $request->NIK,
+            'tanggal_lahir' => $request->tanggal_lahir,
+            'no_telp' => $request->no_telp,
+            'alamat' => $request->alamat,
+            'pekerjaan' => $request->pekerjaan
+        ];
+
         if ($user == '') {
-            $user = new User([
-                'name' => $request->name,
-                'email' => $request->email,
-                'password' => Hash::make($request->password),
-                'role' => $request->role,
-                'NIK' => $request->NIK,
-                'tanggal_lahir' => $request->tanggal_lahir,
-                'no_telp' => $request->no_telp,
-                'alamat' => $request->alamat,
-                'pekerjaan' => $request->pekerjaan
-            ]);
+            $user = new User($data);
             $user->save();
 
             return redirect()->route('super');
         }
+
         return redirect()->route('super');
     }
 

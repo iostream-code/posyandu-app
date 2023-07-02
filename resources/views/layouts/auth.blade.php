@@ -40,6 +40,7 @@
 
     <main>
         <div class="container">
+            @include('components.error')
 
             @yield('content')
 
