@@ -58,7 +58,7 @@ Route::get('/admin/data-periksa/data-imunisasi/{imunisasi}', [ImunisasiControlle
 Route::get('/admin/data-periksa/data-imunisasi/{imunisasi}/edit', [ImunisasiController::class, 'edit'])->name('edit_imunisasi');
 Route::patch('/admin/data-periksa/data-imunisasi/{imunisasi}/edit', [ImunisasiController::class, 'update'])->name('update_imunisasi');
 Route::delete('/admin/data-periksa/data-imunisasi/{imunisasi}/delete', [ImunisasiController::class, 'delete'])->name('delete_imunisasi');
-Route::get('/admin/data-imunisasi/cetak-pdf', [ImunisasiController::class, 'pdfExport'])->name('cetak_imunisasi');
+Route::get('/admin/data-imunisasi/download-pdf', [ImunisasiController::class, 'pdfExport'])->name('cetak_imunisasi');
 
 Route::get('/admin/data-periksa/data-timbangan', [TimbanganController::class, 'index'])->name('data_timbangan');
 Route::get('/admin/data-periksa/data-timbangan/create', [TimbanganController::class, 'create'])->name('create_timbangan');
@@ -67,7 +67,7 @@ Route::get('/admin/data-periksa/data-timbangan/{timbangan}', [TimbanganControlle
 Route::get('/admin/data-periksa/data-timbangan/{timbangan}/edit', [TimbanganController::class, 'edit'])->name('edit_timbangan');
 Route::patch('/admin/data-periksa/data-timbangan/{timbangan}/edit', [TimbanganController::class, 'update'])->name('update_timbangan');
 Route::delete('/admin/data-periksa/data-timbangan/{timbangan}/delete', [TimbanganController::class, 'delete'])->name('delete_timbangan');
-Route::get('/admin/data-timbangan/cetak-pdf', [TimbanganController::class, 'pdfExport'])->name('cetak_timbangan');
+Route::get('/admin/data-timbangan/download-pdf', [TimbanganController::class, 'pdfExport'])->name('cetak_timbangan');
 
 Route::get('/admin/data-periksa/data-ibu-hamil', [IbuHamilController::class, 'index'])->name('data_ibu_hamil');
 Route::get('/admin/data-periksa/data-ibu-hamil/create', [IbuHamilController::class, 'create'])->name('create_data_ibu_hamil');
@@ -76,7 +76,7 @@ Route::get('/admin/data-periksa/data-ibu-hamil/{ibuhamil}', [IbuHamilController:
 Route::get('/admin/data-periksa/data-ibu-hamil/{ibuhamil}/edit', [IbuHamilController::class, 'edit'])->name('edit_data_ibu_hamil');
 Route::patch('/admin/data-periksa/data-ibu-hamil/{ibuhamil}/edit', [IbuHamilController::class, 'update'])->name('update_data_ibu_hamil');
 Route::delete('/admin/data-periksa/data-ibu-hamil/{ibuhamil}/delete', [IbuHamilController::class, 'delete'])->name('delete_data_ibu_hamil');
-Route::get('/admin/data-ibu-hamil/cetak-pdf', [IbuHamilController::class, 'pdfExport'])->name('cetak_ibu_hamil');
+Route::get('/admin/data-ibu-hamil/download-pdf', [IbuHamilController::class, 'pdfExport'])->name('cetak_ibu_hamil');
 
 //User
 Route::get('/my-portal/data-imunisasi', [ImunisasiController::class, 'index'])->name('customer_data_imunisasi');
