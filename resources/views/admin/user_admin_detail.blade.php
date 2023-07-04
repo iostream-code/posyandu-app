@@ -82,20 +82,6 @@
                                 <form action="{{ route('update_warga', $user) }}" method="post">
                                     @csrf
                                     @method('patch')
-                                    {{-- <div class="row mb-3">
-                                        <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile
-                                            IPicture</label>
-                                        <div class="col-md-8 col-lg-9">
-                                            <img src="{{ asset('assets/img/profile-img.png') }}" alt="Profile"
-                                                width="190">
-                                            <div class="pt-2">
-                                                <a href="#" class="btn btn-primary btn-sm"
-                                                    title="Upload new profile image"><i class="bi bi-upload"></i></a>
-                                                <a href="#" class="btn btn-danger btn-sm"
-                                                    title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                                            </div>
-                                        </div>
-                                    </div> --}}
                                     <div class="row mb-3">
                                         <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Nama Lengkap</label>
                                         <div class="col-md-8 col-lg-9">
@@ -128,6 +114,14 @@
                                                         Ketua Kader
                                                     </label>
                                                 </div>
+                                            </div>
+                                        </div>
+                                    @else
+                                        <div class="row mb-3">
+                                            <label for="role" class="col-md-4 col-lg-3 col-form-label">Role</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input name="role" type="text" class="form-control" id="role"
+                                                    value="{{ $user->role }}">
                                             </div>
                                         </div>
                                     @endif
