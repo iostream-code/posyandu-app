@@ -32,7 +32,7 @@ class UserController extends Controller
     {
         return view('admin.user_admin_create');
     }
-    
+
     public function storeAdmin(Request $request)
     {
         $request->validate([
@@ -60,10 +60,10 @@ class UserController extends Controller
         ];
 
         $user = new User($data);
-        
-        if ($user->save()) 
+
+        if ($user->save())
             return redirect()->route('super');
-        
+
         return redirect()->back();
     }
 
@@ -89,7 +89,9 @@ class UserController extends Controller
 
         if (Auth::user()->role == 'User')
             return view('customer.warga_profile', compact('user'));
-        return redirect()->route('super');
+        elseif (Auth::user()->role == 'Super')
+            return redirect()->route('super');
+        return redirect()->route('home');
     }
 
     public function delete(User $user)

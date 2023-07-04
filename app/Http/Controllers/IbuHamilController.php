@@ -20,7 +20,7 @@ class IbuHamilController extends Controller
 
             return view('admin.ibu-hamil', compact('ibu_hamil'));
         } else {
-            $ibu_hamil = IbuHamil::where('id', Auth::id())->get();
+            $ibu_hamil = IbuHamil::where('user_id', Auth::id())->get();
 
             return view('customer.data_ibu_hamil', compact('ibu_hamil'));
         }
