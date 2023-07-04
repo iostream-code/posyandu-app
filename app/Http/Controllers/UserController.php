@@ -87,10 +87,12 @@ class UserController extends Controller
             'pekerjaan' => $request->pekerjaan
         ]);
 
-        if (Auth::user()->role == 'User')
-            return view('customer.warga_profile', compact('user'));
-        elseif (Auth::user()->role == 'Super')
+        if (Auth::user()->role == 'Super') {
+            if($user->role != 'Admin')
+                return redirect()->route('home');
             return redirect()->route('super');
+        } elseif (Auth::user()->role == 'User')
+            return view('customer.warga_profile', compact('user'));
         return redirect()->route('home');
     }
 
