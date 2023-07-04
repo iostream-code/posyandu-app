@@ -32,14 +32,12 @@ class UserController extends Controller
     {
         return view('admin.user_admin_create');
     }
-
+    
     public function storeAdmin(Request $request)
     {
-        $user = User::where('email', $request->email)->first();
-
         $request->validate([
             'name' => 'required',
-            'email' => 'required|unique',
+            'email' => 'required',
             'password' => 'required|min:8',
             'role' => 'required',
             'NIK' => 'required|numeric|min:16',
@@ -61,14 +59,12 @@ class UserController extends Controller
             'pekerjaan' => $request->pekerjaan
         ];
 
-        if ($user == '') {
-            $user = new User($data);
-            $user->save();
-
+        $user = new User($data);
+        
+        if ($user->save()) 
             return redirect()->route('super');
-        }
-
-        return redirect()->route('super');
+        
+        return redirect()->back();
     }
 
     public function detail(User $user)
@@ -93,14 +89,14 @@ class UserController extends Controller
 
         if (Auth::user()->role == 'User')
             return view('customer.warga_profile', compact('user'));
-        return redirect()->route('home');
+        return redirect()->route('super');
     }
 
     public function delete(User $user)
     {
         $user->delete();
 
-        if (Route::has('super'))
+        if (Auth::user()->role == 'Super')
             return redirect()->route('super');
 
         return redirect()->route('admin');
