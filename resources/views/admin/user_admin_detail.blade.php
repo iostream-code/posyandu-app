@@ -109,7 +109,7 @@
                                             <div class="col-md-8 col-lg-9">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="radio" name="role"
-                                                        id="anggota" value="Anggota">
+                                                        id="anggota" value="User">
                                                     <label class="form-check-label" for="anggota">
                                                         Anggota
                                                     </label>

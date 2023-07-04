@@ -80,6 +80,7 @@ class UserController extends Controller
         $user->update([
             'name' => $request->name,
             'email' => $request->email,
+            'role' => $request->role,
             'NIK' => $request->NIK,
             'tanggal_lahir' => $request->tanggal_lahir,
             'no_telp' => $request->no_telp,
