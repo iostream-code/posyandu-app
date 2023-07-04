@@ -100,8 +100,11 @@ class UserController extends Controller
     {
         $user->delete();
 
-        if (Auth::user()->role == 'Super')
+        if (Auth::user()->role == 'Super'){
+            if($user->role != 'Admin')
+                return redirect()->route('home');
             return redirect()->route('super');
+        }
 
         return redirect()->route('admin');
     }
