@@ -11,7 +11,8 @@
                         <div class="d-flex flex-row justify-content-between align-items-center">
                             <h5 class="card-title">Data Timbangan User</h5>
                             <div class="d-row">
-                                <button type="button" class="btn btn-primary btn-sm" onclick="dataexport('pdf')"><i
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="window.location='{{ route('cetak_timbangan') }}'"><i
                                         class="bi bi-printer-fill"></i></button>
                                 <button type="button" class="btn btn-success btn-sm"
                                     onclick="window.location='{{ route('create_timbangan') }}'"><i
