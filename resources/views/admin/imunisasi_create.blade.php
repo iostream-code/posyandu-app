@@ -11,7 +11,7 @@
                     <form action="{{ route('store_imunisasi') }}" method="post">
                         @csrf
                         <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label">User ID</label>
+                            <label class="col-sm-2 col-form-label">Nama Anggota</label>
                             <div class="col-sm-10">
                                 <select name="user_id" class="form-select" aria-label="Default select example">
                                     <option selected>Pilih Anggota Posyandu</option>

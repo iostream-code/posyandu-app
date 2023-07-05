@@ -25,11 +25,7 @@
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Nama</th>
-                                    <th scope="col">Kehamilan Ke-</th>
                                     <th scope="col">Usia Kehamilan (bulan)</th>
-                                    <th scope="col">Golongan Darah</th>
-                                    <th scope="col">Tinggi Badan</th>
-                                    <th scope="col">Berat badan</th>
                                     <th scope="col">Tanggal Periksa</th>
                                     <th scope="col">Action</th>
                                 </tr>
@@ -39,11 +35,7 @@
                                     <tr>
                                         <th scope="row">{{ $loop->iteration }}</th>
                                         <td>{{ $data->nama }}</td>
-                                        <td>{{ $data->kehamilan_ke }}</td>
                                         <td>{{ $data->umur_kehamilan }}</td>
-                                        <td>{{ $data->golongan_darah }}</td>
-                                        <td>{{ $data->tinggi_badan }}</td>
-                                        <td>{{ $data->berat_badan }}</td>
                                         <td>{{ $data->tanggal_periksa }}</td>
                                         <td>
                                             <div class="d-flex flex-row gap-2">
