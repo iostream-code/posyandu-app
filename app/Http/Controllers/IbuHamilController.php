@@ -84,7 +84,7 @@ class IbuHamilController extends Controller
             'user_id' => $request->user_id,
             'nama' => $request->nama,
             'kehamilan_ke' => $request->kehamilan_ke,
-            'umur_kehamilan' => $request->usia_kandungan,
+            'umur_kehamilan' => $request->umur_kehamilan,
             'golongan_darah' => $request->golongan_darah,
             'tinggi_badan' => $request->tinggi_badan,
             'berat_badan' => $request->berat_badan,

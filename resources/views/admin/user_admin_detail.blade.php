@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('page-header', 'Data Warga')
+@section('page-header', 'Data Admin')
 
 @section('content')
     <section class="section profile">
