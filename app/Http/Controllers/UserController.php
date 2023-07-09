@@ -2,91 +2,111 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-
 use App\Models\User;
 use App\Models\Warga;
 
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Route;
+
 class UserController extends Controller
 {
+    public function super()
+    {
+        $users = User::where('role', '!=', 'Super')
+            ->where('role', '!=', 'User')
+            ->get();
+
+        return view('admin.user_admin', compact('users'));
+    }
+
     public function admin()
     {
-        $users = User::where('is_admin', false)->get();
+        $users = User::where('role', 'User')->get();
 
         return view('admin.home', compact('users'));
     }
 
+    public function createAdmin()
+    {
+        return view('admin.user_admin_create');
+    }
+
+    public function storeAdmin(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required|min:8',
+            'role' => 'required',
+            'NIK' => 'required|numeric|min:16',
+            'tanggal_lahir' => 'required',
+            'no_telp' => 'required|numeric|min:9',
+            'alamat' => 'required',
+            'pekerjaan' => 'required'
+        ]);
+
+        $data = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'role' => $request->role,
+            'NIK' => $request->NIK,
+            'tanggal_lahir' => $request->tanggal_lahir,
+            'no_telp' => $request->no_telp,
+            'alamat' => $request->alamat,
+            'pekerjaan' => $request->pekerjaan
+        ];
+
+        $user = new User($data);
+
+        if ($user->save())
+            return redirect()->route('super');
+
+        return redirect()->back();
+    }
+
     public function detail(User $user)
     {
-        return view('admin.user_detail', compact('user'));
+        if (Auth::user()->role == 'User')
+            return view('customer.warga_profile', compact('user'));
+
+        return view('admin.user_admin_detail', compact('user'));
+    }
+
+    public function update(User $user, Request $request)
+    {
+        $user->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'role' => $request->role,
+            'NIK' => $request->NIK,
+            'tanggal_lahir' => $request->tanggal_lahir,
+            'no_telp' => $request->no_telp,
+            'alamat' => $request->alamat,
+            'pekerjaan' => $request->pekerjaan
+        ]);
+
+        if (Auth::user()->role == 'Super') {
+            if($user->role != 'Admin')
+                return redirect()->route('home');
+            return redirect()->route('super');
+        } elseif (Auth::user()->role == 'User')
+            return view('customer.warga_profile', compact('user'));
+        return redirect()->route('home');
     }
 
     public function delete(User $user)
     {
         $user->delete();
-        return redirect()->route('admin');
-    }
-    
-    public function createWarga()
-    {
-        if (Auth::user()->is_admin == false)
-            return view('customer.warga_create');
-        return redirect()->back();
-    }
 
-    public function storeWarga(Request $request)
-    {
-        $warga = new Warga([
-            'user_id' => Auth::id(),
-            'NIK' => $request->NIK,
-            'tanggal_lahir' => $request->tanggal_lahir,
-            'no_telp' => $request->no_telp,
-            'alamat' => $request->alamat,
-            'pekerjaan' => $request->pekerjaan
-        ]);
-        $warga->save();
-
-        return redirect()->route('my-portal');
-    }
-
-    public function showWarga()
-    {
-        $user = User::where('id', Auth::id())->first();
-
-        if (isset($user->warga))
-            return view('customer.warga_profile', compact('user'));
-        return redirect()->route('create_warga');
-    }
-
-    public function editWarga(User $user)
-    {
-        return view('customer.warga_edit', compact('user'));
-    }
-
-    public function updateWarga(User $user, Request $request)
-    {
-        if (Auth::user()->is_admin) {
-            $user->update([
-                'name' => $request->name,
-                'email' => $request->email,
-                'is_admin' => $request->is_admin
-            ]);
-        } else {
-            $user->update([
-                'name' => $request->name,
-                'email' => $request->email
-            ]);
+        if (Auth::user()->role == 'Super'){
+            if($user->role != 'Admin')
+                return redirect()->route('home');
+            return redirect()->route('super');
         }
 
-        $user->warga->update([
-            'NIK' => $request->NIK,
-            'tanggal_lahir' => $request->tanggal_lahir,
-            'no_telp' => $request->no_telp,
-            'alamat' => $request->alamat,
-            'pekerjaan' => $request->pekerjaan
-        ]);
-
-        return redirect()->route('profile_warga');
+        return redirect()->route('admin');
     }
 }

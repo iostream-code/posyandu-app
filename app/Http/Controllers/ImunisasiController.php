@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Imunisasi;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Dompdf\Dompdf;
+
 
 class ImunisasiController extends Controller
 {
@@ -15,12 +17,12 @@ class ImunisasiController extends Controller
      */
     public function index()
     {
-        if (Auth::user()->is_admin) {
+        if (Auth::user()->role != 'User') {
             $imunisasi = Imunisasi::all();
 
             return view('admin.imunisasi', compact('imunisasi'));
         } else {
-            $imunisasi = Imunisasi::where('id', Auth::id())->get();
+            $imunisasi = Imunisasi::where('user_id', Auth::id())->get();
 
             return view('customer.data_imunisasi', compact('imunisasi'));
         }
@@ -31,7 +33,7 @@ class ImunisasiController extends Controller
      */
     public function create()
     {
-        $users = User::where('is_admin', false)->get();
+        $users = User::where('role', 'User')->get();
 
         return view('admin.imunisasi_create', compact('users'));
     }
@@ -67,7 +69,7 @@ class ImunisasiController extends Controller
      */
     public function edit(Imunisasi $imunisasi)
     {
-        $users = User::where('is_admin', false)->get();
+        $users = User::where('role', 'User')->get();
 
         return view('admin.imunisasi_edit', compact('imunisasi', 'users'));
     }
@@ -96,5 +98,24 @@ class ImunisasiController extends Controller
         $imunisasi->delete();
 
         return redirect()->route('data_imunisasi');
+    }
+
+    public function pdfView()
+    {
+        $imunisasi = Imunisasi::all();
+
+        return view('admin.imunisasi_pdf', compact('imunisasi'));
+    }
+
+    public function pdfExport()
+    {
+        $imunisasi = Imunisasi::all();
+
+        $pdf = new Dompdf();
+        $pdf->loadHtml(view('admin.imunisasi_pdf', compact('imunisasi')));
+        $pdf->setPaper('a4', 'potrait');
+        $pdf->render();
+
+        return $pdf->stream('data-imunisasi.pdf');
     }
 }

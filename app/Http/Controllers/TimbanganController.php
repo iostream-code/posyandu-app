@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Timbangan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Dompdf\Dompdf;
 
 class TimbanganController extends Controller
 {
@@ -14,12 +15,12 @@ class TimbanganController extends Controller
      */
     public function index()
     {
-        if (Auth::user()->is_admin) {
+        if (Auth::user()->role != 'User') {
             $timbangan = Timbangan::all();
 
             return view('admin.timbangan', compact('timbangan'));
         } else {
-            $timbangan = Timbangan::where('id', Auth::id())->get();
+            $timbangan = Timbangan::where('user_id', Auth::id())->get();
 
             return view('customer.data_timbangan', compact('timbangan'));
         }
@@ -30,7 +31,7 @@ class TimbanganController extends Controller
      */
     public function create()
     {
-        $users = User::where('is_admin', false)->get();
+        $users = User::where('role', 'User')->get();
 
         return view('admin.timbangan_create', compact('users'));
     }
@@ -70,7 +71,7 @@ class TimbanganController extends Controller
      */
     public function edit(Timbangan $timbangan)
     {
-        $users = User::where('is_admin', false)->get();
+        $users = User::where('role', 'User')->get();
 
         return view('admin.timbangan_edit', compact('timbangan', 'users'));
     }
@@ -102,6 +103,18 @@ class TimbanganController extends Controller
     {
         $timbangan->delete();
 
-        return redirect()->route('timbangan');
+        return redirect()->route('data_timbangan');
+    }
+
+    public function pdfExport()
+    {
+        $timbangan = Timbangan::all();
+
+        $pdf = new Dompdf();
+        $pdf->loadHtml(view('admin.timbangan_pdf', compact('timbangan')));
+        $pdf->setPaper('a4', 'potrait');
+        $pdf->render();
+
+        return $pdf->stream('data-timbangan.pdf');
     }
 }

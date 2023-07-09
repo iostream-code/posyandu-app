@@ -10,8 +10,8 @@
     <title>SI - Posyandu</title>
 
     <!-- Favicons -->
-    <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset('assets/img/logo.png') }}" rel="icon">
+    <link href="{{ asset('assets/img/logo.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link
@@ -32,7 +32,6 @@
 </head>
 
 <body>
-
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top d-flex align-items-center header-transparent">
         <div class="container d-flex align-items-center justify-content-between">
@@ -99,18 +98,31 @@
 
         <div class="container">
             <div class="row justify-content-between">
-                <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
+                <div class="col-lg-8 order-2 order-lg-1 d-flex align-items-center">
                     <div data-aos="zoom-out">
-                        <h1>Selamat Datang di <span>Sistem Informasi Posyandu</span></h1>
-                        <h2>Semua yang Anda butuhkan kini dapat diakses dalam sebuah website</h2>
+                        <h1>Selamat Datang di <span>Sistem Informasi Posyandu Desa Ngariboyo</span></h1>
+                        <h2>Semua yang anda butuhkan kini dapat diakses dalam sebuah website</h2>
                         <div class="text-center text-lg-start">
-                            <a href="#about" class="btn-get-started scrollto">Labih Lanjut</a>
+                            <a href="#about" class="btn-get-started scrollto">Lebih Lanjut</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 order-1 order-lg-2 hero-img text-center" data-aos="zoom-out" data-aos-delay="300">
+                    <img src="assets/img/logo-desa.png" class="img-fluid animated" width="60%"
+                        alt="Kabupaten Magetan">
+                </div>
+                {{-- <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
+                    <div data-aos="zoom-out">
+                        <h1>Selamat Datang di <span>Sistem Informasi Posyandu Desa Ngariboyo</span></h1>
+                        <h2>Semua yang anda butuhkan kini dapat diakses dalam sebuah website</h2>
+                        <div class="text-center text-lg-start">
+                            <a href="#about" class="btn-get-started scrollto">Lebih Lanjut</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
-                    <img src="assets/img/hero-img-2.png" class="img-fluid animated" alt="">
-                </div>
+                    <img src="assets/img/logo-desa.png" class="img-fluid animated" alt="">
+                </div> --}}
             </div>
         </div>
 
@@ -183,52 +195,74 @@
             <div class="container-fluid">
 
                 <div class="row">
-                    <div class="col-xl-10 col-lg-8 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5"
+                    <div class="col-lg-12 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5"
                         data-aos="fade-left">
                         <div class="section-title" data-aos="fade-up">
                             <h2>Layanan</h2>
                             <p>Kami Melayani</p>
                         </div>
-                        <p>Jadwal kegiatan posyandu Dahlia 1 dilakukan secara rutin tanggal 21 setiap bulannya, yang
-                            berlokasi di rumah Ibu Laili Mukharomah
-                            RT 3 RW 1 Dusun Jetis, Desa Ngariboyo. Adapun program layanan yang dilakukan oleh Posyandu
-                            Dahlia 1 diantaranya :
+
+                        <p class="justify-content-center">Jadwal kegiatan posyandu Dahlia 1 dilakukan secara rutin
+                            tanggal 21 setiap bulannya, yang berlokasi di rumah Ibu Laili Mukharomah RT 3 RW 1 Dusun
+                            Jetis, Desa Ngariboyo.
+                            Adapun program layanan yang dilakukan oleh Posyandu Dahlia 1 diantaranya :
                         </p>
 
-                        <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="icon"><i class="bx bx-fingerprint"></i></div>
-                            <h4 class="title"><a href="">Timbangan</a></h4>
-                            <p class="description">Posyandu Dahlia 1 melayani program timbangan, dimana bayi dan balita
-                                akan di timbang berat badan dan diukur tinggi badannya untuk mengetahui
-                                perkembangan bayi dan balita yang ada di Dusun Jetis Desa Ngariboyo setiap bulannya.
-                            </p>
-                        </div>
+                        <div class="row mt-3">
+                            <div class="col-xl-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in"
+                                data-aos-delay="100">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <h4 style="color: #01036f;"><strong>Timbangan</strong></h4>
+                                        </h5>
+                                        <p class="card-text" style="text-align: justify;">Posyandu Dahlia 1 melayani
+                                            program timbangan, dimana bayi dan balita
+                                            akan di timbang berat badan dan diukur tinggi badannya untuk mengetahui
+                                            perkembangan bayi dan balita yang ada di Dusun Jetis Desa Ngariboyo setiap
+                                            bulannya.</p>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="icon"><i class="bx bx-gift"></i></div>
-                            <h4 class="title"><a href="">Imunisasi</a></h4>
-                            <p class="description">Posyandu Dahlia 1 juga melayani program imunisasi bagi bayi dan
-                                balita, dimana imunisasi akan dilakukan secara bertahap sesuai dengan umur dan jenis
-                                vaksin agar kesehatan
-                                terjaga dan terhindar dari penyakit.
-                            </p>
-                        </div>
+                            <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
+                                data-aos-delay="200">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <h4 style="color: #01036f;"><strong>Imunisasi</strong></h4>
+                                        </h5>
+                                        <p class="card-text" style="text-align: justify;">Posyandu Dahlia 1 juga
+                                            melayani program imunisasi bagi bayi dan
+                                            balita, dimana imunisasi akan dilakukan secara bertahap sesuai dengan umur
+                                            dan jenis
+                                            vaksin agar kesehatan
+                                            terjaga dan terhindar dari penyakit.</p>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
-                            <div class="icon"><i class="bx bx-atom"></i></div>
-                            <h4 class="title"><a href="">Cek Ibu Hamil</a></h4>
-                            <p class="description">Posyandu Dahlia 1 juga melayani cek kesehatan ibu hamil untuk
-                                mengetahui perkembangan janin dan kesehatan ibu agar terhindar dari
-                                resiko yang tidak diinginkan. </p>
+                            <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
+                                data-aos-delay="300">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <h4 style="color: #01036f;"><strong>Cek Ibu Hamil</strong></h4>
+                                            <p class="card-text" style="text-align: justify;">Posyandu Dahlia 1 juga
+                                                melayani cek kesehatan ibu hamil untuk
+                                                mengetahui perkembangan janin dan kesehatan ibu agar terhindar dari
+                                                resiko yang tidak diinginkan.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
         <!-- End Features Section -->
 
         <!-- ======= Gallery Section ======= -->
-        <section id="gallery" class="gallery section-bg">
+        <section id="gallery" class="gallery">
             <div class="container">
 
                 <div class="section-title" data-aos="fade-up">
@@ -323,12 +357,12 @@
                             <div class="address">
                                 <i class="bi bi-geo-alt"></i>
                                 <h4>Alamat</h4>
-                                <p>Jl. Eang Sigogati, Dsn. Jetis RT 3 RW 1, Ds. Ngariboyo, Kab. Magetan</p>
+                                <p>Jl. Eang Singogati, Dsn. Jetis RT 3 RW 1, Ds. Ngariboyo, Kab. Magetan</p>
                             </div>
                             <div class="email">
                                 <i class="bi bi-envelope"></i>
                                 <h4>Email</h4>
-                                <p>infoPosyandu@gmail.com</p>
+                                <p>posyanduDahlia1@gmail.com</p>
                             </div>
                             <div class="phone">
                                 <i class="bi bi-phone"></i>

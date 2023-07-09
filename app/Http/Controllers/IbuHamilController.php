@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\IbuHamil;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Dompdf\Dompdf;
 
 class IbuHamilController extends Controller
 {
@@ -14,12 +15,12 @@ class IbuHamilController extends Controller
      */
     public function index()
     {
-        if (Auth::user()->is_admin) {
+        if (Auth::user()->role != 'User') {
             $ibu_hamil = IbuHamil::all();
 
             return view('admin.ibu-hamil', compact('ibu_hamil'));
         } else {
-            $ibu_hamil = IbuHamil::where('id', Auth::id())->get();
+            $ibu_hamil = IbuHamil::where('user_id', Auth::id())->get();
 
             return view('customer.data_ibu_hamil', compact('ibu_hamil'));
         }
@@ -30,7 +31,7 @@ class IbuHamilController extends Controller
      */
     public function create()
     {
-        $users = User::where('is_admin', false)->get();
+        $users = User::where('role', 'User')->get();
 
         return view('admin.ibu-hamil_create', compact('users'));
     }
@@ -48,7 +49,7 @@ class IbuHamilController extends Controller
             'golongan_darah' => $request->golongan_darah,
             'tinggi_badan' => $request->tinggi_badan,
             'berat_badan' => $request->berat_badan,
-            'tanggal_kehamilan' => $request->tanggal_kehamilan
+            'tanggal_periksa' => $request->tanggal_periksa
         ]);
 
         return redirect()->route('data_ibu_hamil');
@@ -69,7 +70,7 @@ class IbuHamilController extends Controller
      */
     public function edit(IbuHamil $ibuhamil)
     {
-        $users = User::where('is_admin', false)->get();
+        $users = User::where('role', 'User')->get();
 
         return view('admin.ibu_hamil_edit', compact('ibuhamil', 'users'));
     }
@@ -83,11 +84,11 @@ class IbuHamilController extends Controller
             'user_id' => $request->user_id,
             'nama' => $request->nama,
             'kehamilan_ke' => $request->kehamilan_ke,
-            'umur_kehamilan' => $request->usia_kandungan,
+            'umur_kehamilan' => $request->umur_kehamilan,
             'golongan_darah' => $request->golongan_darah,
             'tinggi_badan' => $request->tinggi_badan,
             'berat_badan' => $request->berat_badan,
-            'tanggal_periksa' => $request->tanggal_kehamilan
+            'tanggal_periksa' => $request->tanggal_periksa
         ]);
 
         return redirect()->route('show_data_ibu_hamil', compact('ibuhamil'));
@@ -101,5 +102,17 @@ class IbuHamilController extends Controller
         $ibuhamil->delete();
 
         return redirect()->route('data_ibu_hamil');
+    }
+
+    public function pdfExport()
+    {
+        $ibuHamil = IbuHamil::all();
+
+        $pdf = new Dompdf();
+        $pdf->loadHtml(view('admin.ibu-hamil_pdf', compact('ibuHamil')));
+        $pdf->setPaper('a4', 'potrait');
+        $pdf->render();
+
+        return $pdf->stream('data-ibu-hamil.pdf');
     }
 }

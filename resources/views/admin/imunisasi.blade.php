@@ -10,11 +10,17 @@
                     <div class="card-body">
                         <div class="d-flex flex-row justify-content-between align-items-center">
                             <h5 class="card-title">Data Imunisasi User</h5>
-                            <button type="button" class="btn btn-success btn-sm"
-                                onclick="window.location='{{ route('create_imunisasi') }}'">Tambah Data</button>
+                            <div class="d-row">
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    onclick="window.location='{{ route('cetak_imunisasi') }}'"><i
+                                        class="bi bi-printer-fill"></i></button>
+                                <button type="button" class="btn btn-success btn-sm"
+                                    onclick="window.location='{{ route('create_imunisasi') }}'"><i
+                                        class="bi bi-plus-lg"></i></button>
+                            </div>
                         </div>
                         <!-- Table with stripped rows -->
-                        <table class="table">
+                        <table class="table datatable">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
@@ -38,7 +44,7 @@
                                                 <form action="{{ route('show_imunisasi', $data) }}" method="get">
                                                     @csrf
                                                     <button type="submit" class="btn btn-primary btn-sm"><i
-                                                            class="bi bi-search"></i></button>
+                                                            class="bi bi-pencil-fill"></i></button>
                                                 </form>
                                                 <form action="{{ route('delete_imunisasi', $data) }}" method="post">
                                                     @csrf
