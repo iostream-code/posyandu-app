@@ -32,7 +32,7 @@
                                         <td>
                                             <button type="button" class="btn btn-primary btn-sm"
                                                 onclick="window.location='{{ route('user_detail', $user) }}'"><i
-                                                    class="bi bi-search"></i></button>
+                                                    class="bi bi-pencil-fill"></i></button>
                                             <button type="button" class="btn btn-danger btn-sm"
                                                 onclick="window.location='{{ route('user_delete', $user) }}'"><i
                                                     class="bi bi-trash"></i></button>

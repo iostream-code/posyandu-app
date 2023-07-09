@@ -44,7 +44,7 @@
                                                 <form action="{{ route('show_imunisasi', $data) }}" method="get">
                                                     @csrf
                                                     <button type="submit" class="btn btn-primary btn-sm"><i
-                                                            class="bi bi-search"></i></button>
+                                                            class="bi bi-pencil-fill"></i></button>
                                                 </form>
                                                 <form action="{{ route('delete_imunisasi', $data) }}" method="post">
                                                     @csrf
