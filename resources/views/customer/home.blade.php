@@ -4,25 +4,29 @@
     <div class="row" data-aos="fade-up">
         <div class="col-lg-3 col-md-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="50">
-                <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
+                {{-- <i class="ri-file-list-3-line" style="color: #11dbcf;"></i> --}}
+                <img width="25%" src="{{ asset('assets/img/imunisasi-icon.png') }}" alt="">
                 <h3><a href="{{ route('customer_data_imunisasi') }}">Data Imunisasi</a></h3>
             </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-                <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
+                {{-- <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i> --}}
+                <img width="25%" src="{{ asset('assets/img/ibu-hamil-icon.png') }}" alt="">
                 <h3><a href="{{ route('customer_data_ibu_hamil') }}">Data Kandungan</a></h3>
             </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="150">
-                <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
+                {{-- <i class="ri-calendar-todo-line" style="color: #e80368;"></i> --}}
+                <img width="25%" src="{{ asset('assets/img/timbangan-icon.png') }}" alt="">
                 <h3><a href="{{ route('customer_data_timbangan') }}">Data Timbangan</a></h3>
             </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
-                <i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
+                {{-- <i class="ri-price-tag-2-line" style="color: #4233ff;"></i> --}}
+                <img width="25%" src="{{ asset('assets/img/profile-icon.png') }}" alt="">
                 <h3><a href="{{ route('profile_warga', Auth::user()) }}">Profile Saya</a></h3>
             </div>
         </div>
