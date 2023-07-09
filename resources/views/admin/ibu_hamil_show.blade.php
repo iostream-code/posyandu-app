@@ -5,16 +5,7 @@
 @section('content')
     <section class="section">
         <div class="row">
-            <div class="col-xl-4">
-                <div class="card">
-                    <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-                        <img src="{{ asset('assets/img/profile-img.png') }}" alt="Profile" class="rounded-circle">
-                        <h3>{{ $user->name }}</h3>
-                        <h6>{{ $user->pekerjaan }}</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-8">
+            <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body pt-3">
                         <!-- Bordered Tabs -->
@@ -38,37 +29,37 @@
                         <div class="tab-content pt-3">
                             <div class="tab-pane fade show active profile-overview" id="detail-ibuhamil">
                                 <div class="row py-2">
-                                    <div class="col-lg-6 col-sm-4 label">Nama Anak</div>
+                                    <div class="col-lg-4 col-sm-4 label">Nama Anak</div>
                                     <div class="col-lg-4 col-sm-6">{{ $ibuhamil->nama }}</div>
                                 </div>
                                 <div class="row py-2">
-                                    <div class="col-lg-6 col-sm-4 label">Kehamilan ke-</div>
+                                    <div class="col-lg-4 col-sm-4 label">Kehamilan ke-</div>
                                     <div class="col-lg-4 col-sm-6">{{ $ibuhamil->kehamilan_ke }}
                                     </div>
                                 </div>
                                 <div class="row py-2">
-                                    <div class="col-lg-6 col-sm-4 label">Usia Kandungan (bulan)</div>
+                                    <div class="col-lg-4 col-sm-4 label">Usia Kandungan (bulan)</div>
                                     <div class="col-lg-4 col-sm-6">
                                         {{ $ibuhamil->umur_kehamilan }}
                                     </div>
                                 </div>
                                 <div class="row py-2">
-                                    <div class="col-lg-6 col-sm-4 label">Golongan Darah</div>
+                                    <div class="col-lg-4 col-sm-4 label">Golongan Darah</div>
                                     <div class="col-lg-4 col-sm-6">{{ $ibuhamil->golongan_darah }}
                                     </div>
                                 </div>
                                 <div class="row py-2">
-                                    <div class="col-lg-6 col-sm-4 label">Lingkar Kepala (cm)</div>
+                                    <div class="col-lg-4 col-sm-4 label">Lingkar Kepala (cm)</div>
                                     <div class="col-lg-4 col-sm-6">{{ $ibuhamil->tinggi_badan }}
                                     </div>
                                 </div>
                                 <div class="row py-2">
-                                    <div class="col-lg-6 col-sm-4 label">Berat Badan (Kg)</div>
+                                    <div class="col-lg-4 col-sm-4 label">Berat Badan (Kg)</div>
                                     <div class="col-lg-4 col-sm-6">{{ $ibuhamil->berat_badan }}
                                     </div>
                                 </div>
                                 <div class="row py-2">
-                                    <div class="col-lg-6 col-sm-4 label">Tanggal Periksa</div>
+                                    <div class="col-lg-4 col-sm-4 label">Tanggal Periksa</div>
                                     <div class="col-lg-4 col-sm-6">
                                         {{ date('d-m-Y', strtotime($ibuhamil->tanggal_periksa)) }}
                                     </div>

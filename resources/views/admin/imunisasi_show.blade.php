@@ -1,20 +1,11 @@
 @extends('layouts.admin')
 
-@section('page-header', 'Data Ibu Hamil')
+@section('page-header', 'Data Imunisasi')
 
 @section('content')
     <section class="section">
         <div class="row">
-            <div class="col-xl-4">
-                <div class="card">
-                    <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-                        <img src="{{ asset('assets/img/profile-img.png') }}" alt="Profile" class="rounded-circle">
-                        <h3>{{ $user->name }}</h3>
-                        <h6>{{ $user->pekerjaan }}</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-8">
+            <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body pt-3">
                         <!-- Bordered Tabs -->
@@ -38,22 +29,22 @@
                         <div class="tab-content pt-3">
                             <div class="tab-pane fade show active profile-overview" id="detail-imunisasi">
                                 <div class="row py-2">
-                                    <div class="col-lg-6 col-sm-4 label">Nama</div>
+                                    <div class="col-lg-4 col-sm-4 label">Nama</div>
                                     <div class="col-lg-4 col-sm-6">{{ $imunisasi->nama }}</div>
                                 </div>
                                 <div class="row py-2">
-                                    <div class="col-lg-6 col-sm-4 label">Tanggal Lahir</div>
+                                    <div class="col-lg-4 col-sm-4 label">Tanggal Lahir</div>
                                     <div class="col-lg-4 col-sm-6">
                                         {{ date('d-m-Y', strtotime($imunisasi->tanggal_periksa)) }}
                                     </div>
                                 </div>
                                 <div class="row py-2">
-                                    <div class="col-lg-6 col-sm-4 label">Jenis Imunisasi</div>
+                                    <div class="col-lg-4 col-sm-4 label">Jenis Imunisasi</div>
                                     <div class="col-lg-4 col-sm-6">{{ $imunisasi->jenis_imunisasi }}
                                     </div>
                                 </div>
                                 <div class="row py-2">
-                                    <div class="col-lg-6 col-sm-4 label">Tanggal Imunisasi</div>
+                                    <div class="col-lg-4 col-sm-4 label">Tanggal Imunisasi</div>
                                     <div class="col-lg-4 col-sm-6">
                                         {{ date('d-m-Y', strtotime($imunisasi->tanggal_imunisasi)) }}
                                     </div>
