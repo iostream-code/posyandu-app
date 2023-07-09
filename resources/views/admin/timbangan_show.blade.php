@@ -75,7 +75,7 @@
                                     @csrf
                                     @method('patch')
                                     <div class="row mb-3">
-                                        <label for="fullName" class="col-md-6 col-lg-4 col-form-label">Nama Anggota</label>
+                                        <label for="fullName" class="col-md-6 col-lg-4 col-form-label">Nama Ibu</label>
                                         <div class="col-md-8 col-lg-8">
                                             <select name="user_id" class="form-select" aria-label="Default select example">
                                                 <option value="{{ $user->id }}">{{ $user->name }}</option>
