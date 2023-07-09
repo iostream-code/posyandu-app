@@ -806,7 +806,7 @@ section {
     transition: ease-in-out 0.3s;
 }
 
-.my-portal .icon-box i {
+.my-portal .icon-box img {
     font-size: 32px;
     padding-right: 10px;
     line-height: 1;
