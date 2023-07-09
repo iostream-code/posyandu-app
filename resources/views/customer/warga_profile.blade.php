@@ -74,6 +74,7 @@
                                             value="{{ $user->name }}">
                                     </div>
                                 </div>
+                                <input type="text" name="role" value="User" hidden>
                                 <div class="row mb-3">
                                     <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
                                     <div class="col-md-8 col-lg-9">
