@@ -2,6 +2,12 @@
 
 Sistem informasi layanan **posyandu** berbasis **Laravel 12** — digitalisasi pencatatan kesehatan ibu dan anak di tingkat posyandu/desa.
 
+## Tampilan
+
+![Landing Page](docs/screenshots/posyandu-home.png)
+
+![Login](docs/screenshots/posyandu-login.png)
+
 ## Fitur
 
 - **Autentikasi & peran** — admin (petugas posyandu) dan warga
