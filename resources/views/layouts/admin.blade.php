@@ -65,6 +65,7 @@
 
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/js/admin.js') }}"></script>
+    @include('components.chatbot')
 </body>
 
 </html>

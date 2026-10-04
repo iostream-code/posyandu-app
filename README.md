@@ -8,6 +8,8 @@ Sistem informasi layanan **posyandu** berbasis **Laravel 12** — digitalisasi p
 
 ![Login](docs/screenshots/posyandu-login.png)
 
+![Chatbot](docs/screenshots/posyandu-chatbot.png)
+
 ## Fitur
 
 - **Autentikasi & peran** — admin (petugas posyandu) dan warga
@@ -17,6 +19,7 @@ Sistem informasi layanan **posyandu** berbasis **Laravel 12** — digitalisasi p
 - **Penimbangan (Timbangan)** — pencatatan berat/tinggi untuk pemantauan tumbuh kembang
 - **Laporan PDF** — ekspor data melalui dompdf
 - **Tabel interaktif** — pencarian & pagination dengan Yajra DataTables, notifikasi SweetAlert
+- **Chatbot asisten 🩺** — widget chat melayang di semua halaman: menjawab info imunisasi, ibu hamil, penimbangan, statistik data; otaknya dapat dihubungkan ke **n8n** (`N8N_WEBHOOK_URL`) dengan bot bawaan sebagai fallback, riwayat per sesi di cache/Redis, rate-limited
 
 ## Tech Stack
 
@@ -45,4 +48,4 @@ Buka http://localhost:8000
 
 ## Riwayat
 
-Dibangun tahun 2023 dengan Laravel 10; dipugar ke **Laravel 12** (Oktober 2026) — dompdf v3, Yajra DataTables v12, SweetAlert v7.2, kompatibel PHP 8.2–8.5, migrasi & test terverifikasi.
+Dibangun tahun 2023 dengan Laravel 10; dipugar ke **Laravel 12** (Oktober 2026) — dompdf v3, Yajra DataTables v12, SweetAlert v7.2, kompatibel PHP 8.2–8.5, migrasi & test terverifikasi. Okt 2026: ditambah **chatbot asisten** ber-otak n8n (fallback bot bawaan, 7 test).

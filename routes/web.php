@@ -84,3 +84,7 @@ Route::get('/my-portal/data-timbangan', [TimbanganController::class, 'index'])->
 Route::get('/my-portal/data-ibu-hamil', [IbuHamilController::class, 'index'])->name('customer_data_ibu_hamil');
 Route::get('/my-portal/profile-saya/{user}', [UserController::class, 'detail'])->name('profile_warga');
 Route::patch('/my-portal/profile-saya/{user}', [UserController::class, 'update'])->name('update_warga');
+
+// Chatbot (publik, rate-limited; otak via n8n bila dikonfigurasi)
+Route::post('/chatbot', [App\Http\Controllers\ChatbotController::class, 'kirim'])->name('chatbot');
+Route::get('/chatbot/{sessionId}', [App\Http\Controllers\ChatbotController::class, 'riwayat']);
